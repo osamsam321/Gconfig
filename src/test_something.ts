@@ -1,0 +1,3 @@
+let stringtest = "Given a TOML configuration and a modification request, generate JSON snippets showing the 'old' and 'new' TOML codes, including table names. The output should strictly follow this structure for system compatibility:\n{\n\t'results':\n\t{\n\t\t'change1':\n\t\t {\n\t\t\t'old': '<first current TOML code>',\n\t\t\t'new': '<first new TOML code>'\n\t\t },\n\t\t'change2':\n\t\t {\n\t\t\t'old': '<second current TOML code>',\n\t\t\t'new': '<second new TOML code>'\n\t\t}\n\t}\n}\n\nPlease ensure accuracy in reflecting the changes as per user suggestions and maintain the specified JSON format for direct system integration."
+
+  console.log(stringtest);

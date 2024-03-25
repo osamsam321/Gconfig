@@ -1,0 +1,201 @@
+2024-02-19T16:14:37.439892938-06:00 - INFO - booting baby
+2024-02-19T16:14:37.439969687-06:00 - INFO - booting up
+2024-02-19T16:14:37.439994247-06:00 - INFO - booting up
+2024-02-19T16:19:34.944912492-06:00 - INFO - booting baby
+2024-02-19T16:19:34.944985442-06:00 - INFO - booting up
+2024-02-19T16:19:34.945009552-06:00 - INFO - booting up
+2024-02-19T16:20:27.563963015-06:00 - INFO - booting baby
+2024-02-19T16:20:27.564034454-06:00 - INFO - booting up
+2024-02-19T16:20:27.564059254-06:00 - INFO - booting up
+2024-02-19T16:24:59.508894252-06:00 - INFO - booting baby
+2024-02-19T16:24:59.508965292-06:00 - INFO - booting up
+2024-02-19T16:24:59.508989361-06:00 - INFO - booting up
+2024-02-19T16:25:04.622443136-06:00 - INFO - booting up
+2024-02-19T16:25:04.650436521-06:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-02-19T16:25:04.650513220-06:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-02-19T16:25:04.650572410-06:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-02-19T16:25:04.650728459-06:00 - DEBUG - resolving host="api.openai.com"
+2024-02-19T16:25:04.666319052-06:00 - DEBUG - connecting to 104.18.7.192:443
+2024-02-19T16:25:04.672211955-06:00 - DEBUG - connected to 104.18.7.192:443
+2024-02-19T16:25:04.683750831-06:00 - TRACE - client handshake Http1
+2024-02-19T16:25:04.683791631-06:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-02-19T16:25:04.683847830-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-02-19T16:25:04.683875220-06:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-02-19T16:25:04.683932550-06:00 - TRACE - encode_headers;
+2024-02-19T16:25:04.683944920-06:00 - TRACE - -> encode_headers;
+2024-02-19T16:25:04.683951680-06:00 - TRACE - Client::encode method=POST, body=Some(Known(908))
+2024-02-19T16:25:04.683974599-06:00 - TRACE - <- encode_headers;
+2024-02-19T16:25:04.683981259-06:00 - TRACE - -- encode_headers;
+2024-02-19T16:25:04.683989739-06:00 - TRACE - sized write, len = 908
+2024-02-19T16:25:04.683996699-06:00 - TRACE - buffer.flatten self.len=202 buf.len=908
+2024-02-19T16:25:04.684025569-06:00 - DEBUG - flushed 1110 bytes
+2024-02-19T16:25:04.684036119-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T16:25:04.759298032-06:00 - TRACE - Conn::read_head
+2024-02-19T16:25:04.759434430-06:00 - TRACE - received 1110 bytes
+2024-02-19T16:25:04.759449960-06:00 - TRACE - parse_headers;
+2024-02-19T16:25:04.759456640-06:00 - TRACE - -> parse_headers;
+2024-02-19T16:25:04.759464810-06:00 - TRACE - Response.parse bytes=1110
+2024-02-19T16:25:04.759488780-06:00 - TRACE - Response.parse Complete(808)
+2024-02-19T16:25:04.759540320-06:00 - TRACE - <- parse_headers;
+2024-02-19T16:25:04.759548569-06:00 - TRACE - -- parse_headers;
+2024-02-19T16:25:04.759554939-06:00 - DEBUG - parsed 13 headers
+2024-02-19T16:25:04.759561259-06:00 - DEBUG - incoming body is content-length (302 bytes)
+2024-02-19T16:25:04.759580769-06:00 - TRACE - decode; state=Length(302)
+2024-02-19T16:25:04.759590549-06:00 - DEBUG - incoming body completed
+2024-02-19T16:25:04.759612169-06:00 - TRACE - maybe_notify; read_from_io blocked
+2024-02-19T16:25:04.759637169-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:25:04.759650309-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:25:04.759690348-06:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-02-19T16:25:04.759707458-06:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-02-19T16:25:04.759780948-06:00 - INFO - your json object was not succesfully and sent and given a good request
+2024-02-19T16:25:04.759861497-06:00 - TRACE - client tx closed
+2024-02-19T16:25:04.759947906-06:00 - TRACE - pool closed, canceling idle interval
+2024-02-19T16:25:04.759965916-06:00 - TRACE - State::close_read()
+2024-02-19T16:25:04.759980396-06:00 - TRACE - State::close_write()
+2024-02-19T16:25:04.760002356-06:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-02-19T16:25:04.760036316-06:00 - TRACE - shut down IO complete
+2024-02-19T16:43:17.944954382-06:00 - INFO - booting baby
+2024-02-19T16:43:17.945065041-06:00 - INFO - booting up
+2024-02-19T16:43:17.945102141-06:00 - INFO - booting up
+2024-02-19T16:43:26.198450844-06:00 - INFO - booting up
+2024-02-19T16:43:26.217018588-06:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-02-19T16:43:26.217069998-06:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-02-19T16:43:26.217109657-06:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-02-19T16:43:26.217256796-06:00 - DEBUG - resolving host="api.openai.com"
+2024-02-19T16:43:26.236806500-06:00 - DEBUG - connecting to 104.18.7.192:443
+2024-02-19T16:43:26.244346744-06:00 - DEBUG - connected to 104.18.7.192:443
+2024-02-19T16:43:26.255952477-06:00 - TRACE - client handshake Http1
+2024-02-19T16:43:26.255989847-06:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-02-19T16:43:26.256067036-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-02-19T16:43:26.256112596-06:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-02-19T16:43:26.256184385-06:00 - TRACE - encode_headers;
+2024-02-19T16:43:26.256200915-06:00 - TRACE - -> encode_headers;
+2024-02-19T16:43:26.256211975-06:00 - TRACE - Client::encode method=POST, body=Some(Known(908))
+2024-02-19T16:43:26.256236585-06:00 - TRACE - <- encode_headers;
+2024-02-19T16:43:26.256249054-06:00 - TRACE - -- encode_headers;
+2024-02-19T16:43:26.256261724-06:00 - TRACE - sized write, len = 908
+2024-02-19T16:43:26.256272804-06:00 - TRACE - buffer.flatten self.len=202 buf.len=908
+2024-02-19T16:43:26.256308754-06:00 - DEBUG - flushed 1110 bytes
+2024-02-19T16:43:26.256323794-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T16:43:26.343986524-06:00 - TRACE - Conn::read_head
+2024-02-19T16:43:26.344156842-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T16:43:26.344670167-06:00 - TRACE - Conn::read_head
+2024-02-19T16:43:26.344698777-06:00 - TRACE - received 1110 bytes
+2024-02-19T16:43:26.344710756-06:00 - TRACE - parse_headers;
+2024-02-19T16:43:26.344720556-06:00 - TRACE - -> parse_headers;
+2024-02-19T16:43:26.344733496-06:00 - TRACE - Response.parse bytes=1110
+2024-02-19T16:43:26.344766086-06:00 - TRACE - Response.parse Complete(808)
+2024-02-19T16:43:26.344825605-06:00 - TRACE - <- parse_headers;
+2024-02-19T16:43:26.344837725-06:00 - TRACE - -- parse_headers;
+2024-02-19T16:43:26.344845645-06:00 - DEBUG - parsed 13 headers
+2024-02-19T16:43:26.344853005-06:00 - DEBUG - incoming body is content-length (302 bytes)
+2024-02-19T16:43:26.344874145-06:00 - TRACE - decode; state=Length(302)
+2024-02-19T16:43:26.344890035-06:00 - DEBUG - incoming body completed
+2024-02-19T16:43:26.344913624-06:00 - TRACE - maybe_notify; read_from_io blocked
+2024-02-19T16:43:26.344945594-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:43:26.344968234-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:43:26.345014143-06:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-02-19T16:43:26.345035623-06:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-02-19T16:43:26.345103803-06:00 - INFO - your json object was not succesfully and sent and given a good request in first section
+2024-02-19T16:43:26.345173172-06:00 - TRACE - client tx closed
+2024-02-19T16:43:26.345243271-06:00 - TRACE - pool closed, canceling idle interval
+2024-02-19T16:43:26.345264341-06:00 - TRACE - State::close_read()
+2024-02-19T16:43:26.345275641-06:00 - TRACE - State::close_write()
+2024-02-19T16:43:26.345294321-06:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-02-19T16:43:26.345333360-06:00 - TRACE - shut down IO complete
+2024-02-19T16:56:24.904898003-06:00 - INFO - booting baby
+2024-02-19T16:56:24.905025731-06:00 - INFO - booting up
+2024-02-19T16:56:24.905055681-06:00 - INFO - booting up
+2024-02-19T16:56:29.264011382-06:00 - INFO - booting up
+2024-02-19T16:56:29.283461561-06:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-02-19T16:56:29.283520300-06:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-02-19T16:56:29.283565070-06:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-02-19T16:56:29.283714159-06:00 - DEBUG - resolving host="api.openai.com"
+2024-02-19T16:56:29.298584698-06:00 - DEBUG - connecting to 104.18.7.192:443
+2024-02-19T16:56:29.309142216-06:00 - DEBUG - connected to 104.18.7.192:443
+2024-02-19T16:56:29.322148711-06:00 - TRACE - client handshake Http1
+2024-02-19T16:56:29.322188741-06:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-02-19T16:56:29.322253640-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-02-19T16:56:29.322284810-06:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-02-19T16:56:29.322345289-06:00 - TRACE - encode_headers;
+2024-02-19T16:56:29.322359539-06:00 - TRACE - -> encode_headers;
+2024-02-19T16:56:29.322367069-06:00 - TRACE - Client::encode method=POST, body=Some(Known(908))
+2024-02-19T16:56:29.322387069-06:00 - TRACE - <- encode_headers;
+2024-02-19T16:56:29.322394279-06:00 - TRACE - -- encode_headers;
+2024-02-19T16:56:29.322404049-06:00 - TRACE - sized write, len = 908
+2024-02-19T16:56:29.322411419-06:00 - TRACE - buffer.flatten self.len=202 buf.len=908
+2024-02-19T16:56:29.322441209-06:00 - DEBUG - flushed 1110 bytes
+2024-02-19T16:56:29.322453508-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T16:56:29.400385945-06:00 - TRACE - Conn::read_head
+2024-02-19T16:56:29.400585213-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T16:56:29.400824651-06:00 - TRACE - Conn::read_head
+2024-02-19T16:56:29.400863720-06:00 - TRACE - received 1110 bytes
+2024-02-19T16:56:29.400887480-06:00 - TRACE - parse_headers;
+2024-02-19T16:56:29.400908400-06:00 - TRACE - -> parse_headers;
+2024-02-19T16:56:29.400929150-06:00 - TRACE - Response.parse bytes=1110
+2024-02-19T16:56:29.400977549-06:00 - TRACE - Response.parse Complete(808)
+2024-02-19T16:56:29.401069779-06:00 - TRACE - <- parse_headers;
+2024-02-19T16:56:29.401088398-06:00 - TRACE - -- parse_headers;
+2024-02-19T16:56:29.401099888-06:00 - DEBUG - parsed 13 headers
+2024-02-19T16:56:29.401118278-06:00 - DEBUG - incoming body is content-length (302 bytes)
+2024-02-19T16:56:29.401160088-06:00 - TRACE - decode; state=Length(302)
+2024-02-19T16:56:29.401182478-06:00 - DEBUG - incoming body completed
+2024-02-19T16:56:29.401220607-06:00 - TRACE - maybe_notify; read_from_io blocked
+2024-02-19T16:56:29.401271157-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:56:29.401304366-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T16:56:29.401376126-06:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-02-19T16:56:29.401409556-06:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-02-19T16:56:29.401521665-06:00 - INFO - your json object was not succesfully. This is the json response: {"error":{"code":"invalid_api_key","message":"Incorrect API key provided: sk-7qvMo****************************************lGea. You can find your API key at https://platform.openai.com/account/api-keys.","param":null,"type":"invalid_request_error"}}
+2024-02-19T16:56:29.401640573-06:00 - TRACE - client tx closed
+2024-02-19T16:56:29.401743073-06:00 - TRACE - pool closed, canceling idle interval
+2024-02-19T16:56:29.401794622-06:00 - TRACE - State::close_read()
+2024-02-19T16:56:29.401817662-06:00 - TRACE - State::close_write()
+2024-02-19T16:56:29.401833192-06:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-02-19T16:56:29.401881581-06:00 - TRACE - shut down IO complete
+2024-02-19T17:09:49.176922069-06:00 - INFO - booting baby
+2024-02-19T17:09:49.176998628-06:00 - INFO - booting up
+2024-02-19T17:09:49.177032847-06:00 - INFO - booting up
+2024-02-19T17:09:52.517061222-06:00 - INFO - booting up
+2024-02-19T17:09:52.543810553-06:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-02-19T17:09:52.543893142-06:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-02-19T17:09:52.543936331-06:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-02-19T17:09:52.544075679-06:00 - DEBUG - resolving host="api.openai.com"
+2024-02-19T17:09:52.561851843-06:00 - DEBUG - connecting to 104.18.7.192:443
+2024-02-19T17:09:52.571834365-06:00 - DEBUG - connected to 104.18.7.192:443
+2024-02-19T17:09:52.592617502-06:00 - TRACE - client handshake Http1
+2024-02-19T17:09:52.592670681-06:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-02-19T17:09:52.592739800-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-02-19T17:09:52.592776740-06:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-02-19T17:09:52.592840489-06:00 - TRACE - encode_headers;
+2024-02-19T17:09:52.592857199-06:00 - TRACE - -> encode_headers;
+2024-02-19T17:09:52.592871058-06:00 - TRACE - Client::encode method=POST, body=Some(Known(908))
+2024-02-19T17:09:52.592898938-06:00 - TRACE - <- encode_headers;
+2024-02-19T17:09:52.592909918-06:00 - TRACE - -- encode_headers;
+2024-02-19T17:09:52.592924438-06:00 - TRACE - sized write, len = 908
+2024-02-19T17:09:52.592937387-06:00 - TRACE - buffer.flatten self.len=201 buf.len=908
+2024-02-19T17:09:52.592975947-06:00 - DEBUG - flushed 1109 bytes
+2024-02-19T17:09:52.592991957-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-02-19T17:09:52.676120738-06:00 - TRACE - Conn::read_head
+2024-02-19T17:09:52.676261996-06:00 - TRACE - received 974 bytes
+2024-02-19T17:09:52.676289696-06:00 - TRACE - parse_headers;
+2024-02-19T17:09:52.676309416-06:00 - TRACE - -> parse_headers;
+2024-02-19T17:09:52.676329196-06:00 - TRACE - Response.parse bytes=974
+2024-02-19T17:09:52.676378985-06:00 - TRACE - Response.parse Complete(807)
+2024-02-19T17:09:52.676455014-06:00 - TRACE - <- parse_headers;
+2024-02-19T17:09:52.676475974-06:00 - TRACE - -- parse_headers;
+2024-02-19T17:09:52.676495473-06:00 - DEBUG - parsed 13 headers
+2024-02-19T17:09:52.676514393-06:00 - DEBUG - incoming body is content-length (167 bytes)
+2024-02-19T17:09:52.676552083-06:00 - TRACE - decode; state=Length(167)
+2024-02-19T17:09:52.676575012-06:00 - DEBUG - incoming body completed
+2024-02-19T17:09:52.676615932-06:00 - TRACE - maybe_notify; read_from_io blocked
+2024-02-19T17:09:52.676673621-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T17:09:52.676704081-06:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-02-19T17:09:52.676752530-06:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-02-19T17:09:52.676779240-06:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-02-19T17:09:52.676871469-06:00 - INFO - your json object was not succesfully. This is the json response: {"error":{"code":null,"message":"you must provide a model parameter","param":null,"type":"invalid_request_error"}}
+2024-02-19T17:09:52.676973367-06:00 - TRACE - client tx closed
+2024-02-19T17:09:52.677057176-06:00 - TRACE - State::close_read()
+2024-02-19T17:09:52.677068616-06:00 - TRACE - State::close_write()
+2024-02-19T17:09:52.677081406-06:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-02-19T17:09:52.677111886-06:00 - TRACE - pool closed, canceling idle interval
+2024-02-19T17:09:52.677145415-06:00 - TRACE - shut down IO complete

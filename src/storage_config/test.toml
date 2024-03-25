@@ -1,0 +1,7 @@
+[info]
+name = "John Doe"
+version = "5.0"
+description = "An updated and even cooler description of a TOML file with a story of foxes and whales"
+email = "beautifulnewemail@example.com"
+[author]
+name = "Sargon James"
