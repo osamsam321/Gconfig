@@ -35,7 +35,7 @@ struct ConfigFile{
 }
 fn main() {
     //parser_json_test();
-    log4rs::init_file("log4rs.yaml", Default::default()).unwrap();
+    log4rs::init_file("log/log4rs.yaml", Default::default()).unwrap();
     info!("booting up");
     handle_cli();
 }
@@ -65,7 +65,8 @@ fn new_config_location_file(file_path: String) -> std::io::Result<()> {
  Ok(())
 }
 
-fn new_config_location_json(file_path:String) -> Result<(), String> {
+fn new_config_location_json(file_path: String, mut alias: String) -> Result<(), String> {
+
     let cfl = "config_file_location.json".to_string();
     let file_content = match fs::read_to_string(&cfl) {
         Ok(file) => file,
@@ -99,20 +100,31 @@ fn new_config_location_json(file_path:String) -> Result<(), String> {
     }
 
     info!("file content {} ", file_content);
-    let mut alias_tmp = file_path.clone();
+
+    let mut bkup_loc:String = "backup_config/".to_string();
+    // if no alias is given. The file name will be used as the alias
+    if alias.is_empty()
+    {
+        alias = file_path.clone();
+        alias.replace("/", "");
+    }
+
+    let mut file_name:String = "".to_string();
     if file_path.clone().contains("/"){
-        alias_tmp = file_path.clone().split_off(file_path.rfind("/")
+        file_name = file_path.clone().split_off(file_path.clone().rfind("/")
             .expect("There was an issue with the slash"));
+    }
+    else {
+        file_name = file_path.clone();
     }
     //let bkup_loc:String = "backup_config/".to_string().push_str(alias_tmp.as_str());
     // now create a backup of the file location
-    let mut bkup_loc:String = "backup_config/".to_string();
-    bkup_loc.push_str(alias_tmp.replace("/", "").as_str());
+    bkup_loc.push_str(file_name.replace("/", "").as_str());
 
     let new_config_entry = ConfigFile {
-        alias: alias_tmp.replace("/", ""),
+        alias: alias,
         iteration: 1,
-        realpath: file_path,
+        realpath: file_path.clone(),
         backup_location: bkup_loc,
         ts: chrono::Utc::now().to_string(),
     };
@@ -123,7 +135,7 @@ fn new_config_location_json(file_path:String) -> Result<(), String> {
     //cfl_content.push_str(serde_json::to_string(&new_config_entry_list).expect("unable to push").as_str());
     let json_string: String = serde_json::to_string(&cfl_content).expect("could serialize cfl_content");
     //cfl_content.push(serde_json::json!(new_config_entry).);
-    fs::write(cfl, json_string.as_bytes()).expect("could not write to config file histroy");
+    fs::write(cfl, json_string.as_bytes()).expect("could not write to config file history");
     info!("writing the follow file metadata to config_file.json {:?}", new_config_entry);
     return Ok(());
 }
@@ -131,7 +143,8 @@ fn new_config_location_json(file_path:String) -> Result<(), String> {
 fn push_file_bkup_dir(config_file_content: ConfigFile){
     let file_content = fs::read_to_string(&config_file_content.realpath).expect("could not create a backup file");
     let mut file_path = "backup_config/".to_string();
-    &file_path.push_str(&config_file_content.alias);
+    let file_name = Path::new(&config_file_content.realpath).file_name().and_then(|name| name.to_str()).unwrap_or("");
+    &file_path.push_str(file_name);
 
     match fs::copy(&config_file_content.realpath, file_path.clone()){
         Ok(_) => info!("could not find backup_config directory so a new one was created"),
@@ -186,10 +199,10 @@ async fn modify_config_file(submatches:ArgMatches){
                 .expect("got string");
             final_file_path = file_path.to_string();
             //new_config_location_file(final_file_path.to_string()).expect("There was an issue with the file");
-            new_config_location_json(final_file_path.to_string())
+            new_config_location_json(final_file_path.to_string(), "".to_string())
                 .expect("There was an issue with the file");
         }
-        else if let Some(mut alias) =  submatches.get_one::<String>("alias and nickname"){
+        else if let Some(alias) =  submatches.get_one::<String>("alias and nickname"){
             info!("alias was selected");
             let cfl: String= fs::read_to_string("config_file_location.json").
                 expect("Could not read from config_file_location.json");
@@ -223,7 +236,8 @@ async fn modify_config_file(submatches:ArgMatches){
             messages : vec![
                 Message{
                     role :"system".to_string(),
-                    content: std::fs::read_to_string("prompt_openai.txt").unwrap(),
+                    content: std::fs::read_to_string("prompt/prompt_openai.txt").
+                        expect("could not find prompt file. Exiting!"),
                 },
                 Message{
                     role: "user".to_string(),
@@ -285,7 +299,7 @@ async fn modify_config_file(submatches:ArgMatches){
 
                                         if let Value::Object(map) = &json {
                                                 info!("full json {}", json.to_string());
-;
+
                                                 //let array = json["choices"][0]["message"]["content"][0]["results"].as_str();
                                         }
                                 } else {
@@ -312,11 +326,53 @@ fn list_aliases(submatches:ArgMatches){
    let file_content_json: Vec<ConfigFile> = serde_json::from_str(&file_content.as_str())
        .expect("Could not parse json in config_file_location.json");
    info!("list of all aliases {:?}", file_content_json);
-   println!("All stored files: ");
-   println!("");
+   println!("Your alias and paths: ");
+   println!();
    for config_content in file_content_json{
-       println!("{}" , config_content.alias);
+   println!("{0} ->  {1}", config_content.alias, config_content.realpath);
    }
+}
+// todo! check if the config json and the storage config are both synced
+fn check_config_json_synced()
+{
+
+}
+
+fn backup_command(submatches: ArgMatches){
+ let json_config_content: String = fs::read_to_string("config_file_location.json")
+     .expect("unable to open config_file_location.json. Exiting");
+ let cf_content: Vec<ConfigFile> = serde_json::from_str(json_config_content.as_str())
+     .expect("unable parse the json. Exiting");
+
+ let mut backup_path= "backup_config/".to_string();
+
+    if let Some(file_path_to_revert) = submatches.get_one::<String>("file_path") {
+        for cf in cf_content{
+            if cf.realpath == file_path_to_revert.to_string(){
+                backup_path.push_str(cf.alias.as_str());
+                fs::copy(cf.realpath, &backup_path)
+                    .expect("unable to copy and paste files. Exiting");
+            }
+        }
+    }
+    else if let Some(alias_to_revert) = submatches.get_one::<String>("alias and nickname") {
+
+        for cf in cf_content{
+            if cf.alias == alias_to_revert.to_string(){
+                backup_path.push_str(cf.alias.as_str());
+                fs::copy(cf.realpath, &backup_path)
+                    .expect("unable to copy and paste files. Exiting");
+            }
+        }
+
+    }
+    else {
+        panic!("Nothing to backup!");
+    }
+}
+// ################ utility functions #################
+
+fn get_backup_aliases(){
 }
 
 async fn parse_cli_arg_matches(matches: ArgMatches){
@@ -330,16 +386,25 @@ async fn parse_cli_arg_matches(matches: ArgMatches){
                 revert_file(revert_file_arg.clone());
             }
 
-            Some(("add_config_file_to_storage", config_location_args)) => {
-             let arg_path= Path::new(config_location_args.get_one::<String>("file_path")
-                         .map(String::as_str).unwrap()).as_os_str().to_str().unwrap().to_string();
-             new_config_location_json(arg_path);
+            Some(("add_config_file_to_storage", add_config_file_args)) => {
+
+                let mut alias = "".to_string();
+                let file_path = Path::new(add_config_file_args.get_one::<String>("file_path")
+                                         .map(String::as_str).unwrap()).as_os_str().to_str().unwrap().to_string();
+                if let Some(alias_arg) = add_config_file_args.get_one::<String>("add alias name"){
+                        alias = alias_arg.to_string();
+                }
+
+                new_config_location_json(file_path, alias);
             }
 
             Some(("list all aliases", alias_list)) => {
                 list_aliases(alias_list.clone());
             }
 
+            Some(("backup", backup_subcommands)) => {
+                backup_command(backup_subcommands.clone());
+            }
             _ => error!("no arg match"),
         }
 }
@@ -349,23 +414,23 @@ async fn handle_cli(){
         .about("adjust your config files using this cli")
         .version("0.0.1")
 
-        .subcommand( Command::new("revert_file") .short_flag('r') .long_flag("revert_file")
+        .subcommand(Command::new("revert_file") .short_flag('r') .long_flag("revert_file")
                     .about("revert the config file to it's original form")
 
-                    .arg(  Arg::new("file_path_to_revert") .short('f') .long("file_path")
+                    .arg(Arg::new("file_path_to_revert") .short('f') .long("file_path")
                         .help("use this command to revert the file with the file path")
                         .action(ArgAction::Set) .num_args(1) )
 
-                    .arg(  Arg::new("alias to revert") .short('a') .long("alias to revert")
+                    .arg(Arg::new("alias to revert") .short('a') .long("alias to revert")
                         .help("use this command to revert the file using the stored alias/nickname")
                         .action(ArgAction::Set) .num_args(1) )
 
         )
 
-        .subcommand( Command::new("modify_config_file") .short_flag('m') .long_flag("modify")
+        .subcommand(Command::new("modify_config_file") .short_flag('m') .long_flag("modify")
                     .about("modify config file")
 
-                    .arg( Arg::new("file_path_to_modify") .short('f') .long("file_path")
+                    .arg(Arg::new("file_path_to_modify") .short('f') .long("file_path")
                          .action(ArgAction::Set) .num_args(1)
                          .help("Modify the config with the specific file path"))
 
@@ -380,12 +445,28 @@ async fn handle_cli(){
 
         )
 
+        .subcommand(Command::new("backup") .short_flag('b') .long_flag("backup")
+                    .about("backup file or alias")
+
+                    .arg( Arg::new("file_path") .short('f') .long("file")
+                         .num_args(1)
+                         .help("add the config with the specific file path"))
+
+                    .arg( Arg::new("alias and nickname") .short('a') .long("alias/nickname")
+                         .num_args(1)
+                         .help("add the config with the specific file path"))
+        )
+
         .subcommand( Command::new("add_config_file_to_storage") .short_flag('a') .long_flag("add")
                     .about("add the config file to storage and create storage")
 
                     .arg( Arg::new("file_path") .short('f') .long("path")
-                         .num_args(1)
+                         .num_args(1) .required(true)
                          .help("add the config with the specific file path"))
+
+                    .arg( Arg::new("add alias name") .short('a') .long("alias")
+                         .num_args(1)
+                         .help("Add and alias name to this config file"))
 
         )
 

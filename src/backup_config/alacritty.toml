@@ -49,7 +49,7 @@ white = "0x93a1a1"
 yellow = "0xb58900"
 
 [colors.primary]
-background = "0x8b0000"
+background = "0x1a1a1a"
 foreground = "0x8caad2"
 
 [env]
