@@ -19,3 +19,4 @@ log4rs = "1.3.0"
 clap = { version = "4.5.1", features = ["derive"] }
 md5 = "0.7.0"
 chrono = "0.4.34"
+toml = "0.8.12"

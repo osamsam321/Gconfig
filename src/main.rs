@@ -33,6 +33,14 @@ struct ConfigFile{
     backup_location: String,
     ts: String,
 }
+#[derive(Debug, Serialize, Deserialize)]
+struct OpenaiConfig{
+    model : Option<String>,
+    temperature:Option<f32>,
+    max_tokens:Option<u32>,
+    top_p:Option<u32>,
+}
+
 fn main() {
     //parser_json_test();
     log4rs::init_file("log/log4rs.yaml", Default::default()).unwrap();
@@ -46,6 +54,7 @@ fn new_config_location_file(file_path: String) -> std::io::Result<()> {
     let mut file_content = match fs::read_to_string(cfl.clone()) {
         Ok(file) => file,
         Err(error) => match error.kind() {
+
 
             std::io::ErrorKind::NotFound => {
                 error!("File not found! Attempting to create new file.");
@@ -226,13 +235,17 @@ async fn modify_config_file(submatches:ArgMatches){
         content.push_str(prompt);
         content.push('\n');
         content.push_str(&config_file_content);
+        let openai_config_file_content = fs::read_to_string("openai_settings.toml")
+            .expect("could not read or find file");
+        let openai_config: OpenaiConfig = toml::from_str(openai_config_file_content.as_str())
+            .expect("was unable to parser toml content");
 
         let json_req = OpenAiReq{
 
-            model : "gpt-3.5-turbo".to_string(),
-            temperature:1.0,
-            max_tokens:300,
-            top_p:1,
+            model : openai_config.model.unwrap() ,
+            temperature:openai_config.temperature.unwrap(),
+            max_tokens:openai_config.max_tokens.unwrap(),
+            top_p:openai_config.top_p.unwrap(),
             messages : vec![
                 Message{
                     role :"system".to_string(),
@@ -328,6 +341,7 @@ fn list_aliases(submatches:ArgMatches){
    info!("list of all aliases {:?}", file_content_json);
    println!("Your alias and paths: ");
    println!();
+
    for config_content in file_content_json{
    println!("{0} ->  {1}", config_content.alias, config_content.realpath);
    }
@@ -339,6 +353,7 @@ fn check_config_json_synced()
 }
 
 fn backup_command(submatches: ArgMatches){
+
  let json_config_content: String = fs::read_to_string("config_file_location.json")
      .expect("unable to open config_file_location.json. Exiting");
  let cf_content: Vec<ConfigFile> = serde_json::from_str(json_config_content.as_str())
@@ -370,9 +385,95 @@ fn backup_command(submatches: ArgMatches){
         panic!("Nothing to backup!");
     }
 }
+
+fn get_filepath_from_alias(alias_par: String) -> Option<String>{
+
+    let mut file_path = Option::None;
+    let cfl_content = fs::read_to_string("config_file_location.json");
+    match &cfl_content {
+         Ok(file) => file,
+         Err(err) => {
+            info!("file not found. Attempting to create file ");
+            fs::write("config_file_location.json", "")
+                .expect("unable to create file. Check permissions, if the file exist, etc");
+            &"".to_string()
+        },
+    };
+
+    let config_content: Vec<ConfigFile> = serde_json::from_str(cfl_content.unwrap().as_str())
+        .expect("unable to parser the json here");
+
+    for config_val in config_content {
+        if config_val.alias == alias_par{
+            if config_val.realpath.trim() != "" {
+                file_path = Some(config_val.realpath);
+            }
+        }
+    }
+
+  return Some(file_path)?
+}
+
+async fn get_content_to_change_list(args: ArgMatches){
+    info!("going to get all possible content");
+    let mut config_content = "".to_string();
+    if let Some(file_path) = args.get_one::<String>("file_path"){
+        config_content = fs::read_to_string(file_path.as_str())
+            .expect("There was an issue while trying to read the file");
+    }
+    else if let Some(alias) = args.get_one::<String>("alias and nickname"){
+        config_content = get_filepath_from_alias(alias.to_string()).unwrap();
+    }
+
+    let file_content = fs::read_to_string("openai_settings.toml").expect("could not read or find file");
+    let openai_config: OpenaiConfig = toml::from_str(file_content.as_str()).expect("was unable to parser toml content");
+    let client = reqwest::Client::new();
+    let openapi_key = env::var("OPENAI_API_KEY")
+        .expect("openapi key not found");
+    let json_req = OpenAiReq{
+
+            model : openai_config.model.unwrap(),
+            temperature: openai_config.temperature.unwrap(),
+            max_tokens:openai_config.max_tokens.unwrap(),
+            top_p:openai_config.top_p.unwrap(),
+            messages : vec![
+                Message{
+                    role :"system".to_string(),
+                    content: std::fs::read_to_string("prompt/list_content_prompt.txt").
+                        expect("could not find prompt file. Exiting!"),
+                },
+                Message{
+                    role: "user".to_string(),
+                    content: config_content,
+                }
+            ]
+    };
+
+    let response = client.post("https://api.openai.com/v1/chat/completions")
+        .header("Authorization", format!("Bearer {}", openapi_key.to_string()))
+        .json(&json_req)
+        .send()
+        .await;
+
+    match response{
+
+        Ok(response) => {
+            println!("Components that could be change: ");
+            println!();
+            let json_response = response.json::<serde_json::Value>().await.unwrap() ;
+            info!("json response {}", json_response);
+            if let Some(msg) = json_response["choices"][0]["message"]["content"].as_str(){
+                println!("{}", msg);
+            }
+        },
+
+        Err(err) => println!("There was an error with response"),
+    }
+}
 // ################ utility functions #################
 
 fn get_backup_aliases(){
+
 }
 
 async fn parse_cli_arg_matches(matches: ArgMatches){
@@ -400,6 +501,9 @@ async fn parse_cli_arg_matches(matches: ArgMatches){
 
             Some(("list all aliases", alias_list)) => {
                 list_aliases(alias_list.clone());
+            }
+            Some(("possible config options", possible_configs)) =>{
+               get_content_to_change_list(possible_configs.clone()).await;
             }
 
             Some(("backup", backup_subcommands)) => {
@@ -472,6 +576,17 @@ async fn handle_cli(){
 
         .subcommand( Command::new("list all aliases") .short_flag('l') .long_flag("list-alias")
                     .about("list all aliases/nicknames")
+        )
+        .subcommand( Command::new("possible config options") .short_flag('p') .long_flag("list-possible")
+                    .about("list all out all possible configuration changes that could be made")
+
+                    .arg( Arg::new("file_path") .short('f') .long("path")
+                         .num_args(1)
+                         .help("list possible configurations using the file path"))
+
+                    .arg( Arg::new("alias and nickname") .short('a') .long("alias")
+                         .num_args(1)
+                         .help("list possible configurations using the alias"))
         )
 
         .get_matches();

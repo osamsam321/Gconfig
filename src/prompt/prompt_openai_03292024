@@ -7,4 +7,4 @@ Transform a file's text based on modification requests into JSON showing 'old' a
   }
 }
 
-Each 'change' object should enumerate a specific edit, sequentially numbered. Include only relevant details. Ensure data types remain consistent (e.g., do not convert "0x00000" to "black"). Refer to the file's content as a guide for modifications."
+Each 'change' object should detail a specific modification, sequentially numbered. Include relevant details only. Please ensure the correct data type (string, integer, etc) is matches e.g. don't change "0x00000" to "black". Use the file's text as a guide.
