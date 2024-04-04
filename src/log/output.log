@@ -3640,3 +3640,1665 @@ bell = true
 2024-03-31T18:08:23.545358572-05:00 - INFO - checking if alias exist, so it could be reverted
 2024-03-31T18:08:23.545366502-05:00 - INFO - content alias is alacritty.toml 
 2024-03-31T18:08:23.545477711-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:37:48.962132920-05:00 - INFO - booting up
+2024-03-31T19:37:48.963745125-05:00 - INFO - alias was selected
+2024-03-31T19:37:48.963823994-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-03-31T19:37:48.992474505-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:37:48.992565994-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:37:48.992612023-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:37:48.992739622-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:37:49.007209528-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:37:49.014800686-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:37:49.029900124-05:00 - TRACE - client handshake Http1
+2024-03-31T19:37:49.029955753-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:37:49.030063772-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:37:49.030133382-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:37:49.030203631-05:00 - TRACE - encode_headers;
+2024-03-31T19:37:49.030219411-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:37:49.030228381-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3982))
+2024-03-31T19:37:49.030253341-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:37:49.030261751-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:37:49.030271900-05:00 - TRACE - sized write, len = 3982
+2024-03-31T19:37:49.030280560-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3982
+2024-03-31T19:37:49.030335740-05:00 - DEBUG - flushed 4184 bytes
+2024-03-31T19:37:49.030358080-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:37:50.351121812-05:00 - TRACE - Conn::read_head
+2024-03-31T19:37:50.351363410-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:37:50.351379490-05:00 - TRACE - parse_headers;
+2024-03-31T19:37:50.351387720-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:37:50.351405770-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:37:50.351461539-05:00 - TRACE - Response.parse Complete(1202)
+2024-03-31T19:37:50.351537838-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:37:50.351547938-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:37:50.351556078-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:37:50.351563538-05:00 - DEBUG - incoming body is content-length (589 bytes)
+2024-03-31T19:37:50.351595748-05:00 - TRACE - decode; state=Length(589)
+2024-03-31T19:37:50.351618828-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:37:50.351678517-05:00 - TRACE - decode; state=Length(422)
+2024-03-31T19:37:50.351714197-05:00 - TRACE - received 422 bytes
+2024-03-31T19:37:50.351726557-05:00 - DEBUG - incoming body completed
+2024-03-31T19:37:50.351750496-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:37:50.351782136-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:37:50.351799386-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:37:50.351816856-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:37:50.351839986-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:37:50.351896585-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:37:50.351912545-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.8",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-03-31T19:37:50.351947425-05:00 - INFO - key change1
+2024-03-31T19:37:50.351957854-05:00 - INFO - value "opacity = 0.8"
+2024-03-31T19:37:50.352007704-05:00 - INFO - old value is "opacity = 0.8"
+2024-03-31T19:37:50.352027864-05:00 - INFO - writing to file
+2024-03-31T19:37:50.352169362-05:00 - INFO - New value: opacity = 0.95
+2024-03-31T19:37:50.352219742-05:00 - INFO - 
+
+2024-03-31T19:37:50.352230662-05:00 - INFO - is bool true true
+2024-03-31T19:37:50.352262902-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.8\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1711931869,"id":"chatcmpl-98zyH6Xz9JAt1CnP4lPgUySWCxgxb","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":41,"prompt_tokens":1101,"total_tokens":1142}}
+2024-03-31T19:37:50.352364511-05:00 - TRACE - client tx closed
+2024-03-31T19:37:50.352396400-05:00 - TRACE - State::close_read()
+2024-03-31T19:37:50.352413840-05:00 - TRACE - State::close_write()
+2024-03-31T19:37:50.352434730-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:37:50.352493169-05:00 - TRACE - shut down IO complete
+2024-03-31T19:38:09.738339118-05:00 - INFO - booting up
+2024-03-31T19:38:09.739551166-05:00 - INFO - alias was selected
+2024-03-31T19:38:09.739611986-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-03-31T19:38:09.758824645-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:38:09.758879954-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:38:09.758911244-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:38:09.759017633-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:38:09.763274763-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-03-31T19:38:09.771010181-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-03-31T19:38:09.782952829-05:00 - TRACE - client handshake Http1
+2024-03-31T19:38:09.782995999-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:38:09.783090708-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:38:09.783159797-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:38:09.783230837-05:00 - TRACE - encode_headers;
+2024-03-31T19:38:09.783246616-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:38:09.783255066-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3984))
+2024-03-31T19:38:09.783279976-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:38:09.783288376-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:38:09.783298736-05:00 - TRACE - sized write, len = 3984
+2024-03-31T19:38:09.783307096-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3984
+2024-03-31T19:38:09.783362065-05:00 - DEBUG - flushed 4186 bytes
+2024-03-31T19:38:09.783376325-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:38:11.035017758-05:00 - TRACE - Conn::read_head
+2024-03-31T19:38:11.035234745-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:38:11.035254795-05:00 - TRACE - parse_headers;
+2024-03-31T19:38:11.035265125-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:38:11.035290335-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:38:11.035351234-05:00 - TRACE - Response.parse Complete(1203)
+2024-03-31T19:38:11.035438474-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:38:11.035462503-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:38:11.035472273-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:38:11.035481853-05:00 - DEBUG - incoming body is content-length (620 bytes)
+2024-03-31T19:38:11.035519863-05:00 - TRACE - decode; state=Length(620)
+2024-03-31T19:38:11.035546413-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(454)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:38:11.035688311-05:00 - TRACE - decode; state=Length(454)
+2024-03-31T19:38:11.035734241-05:00 - TRACE - received 454 bytes
+2024-03-31T19:38:11.035760131-05:00 - DEBUG - incoming body completed
+2024-03-31T19:38:11.035787940-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:38:11.035831910-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:11.035854330-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:11.035876049-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:38:11.035896629-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:38:11.035965489-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:11.035983098-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "background = \"0x1a1a1a\"",
+      "new": "background = \"0x000000\""
+    }
+  }
+}
+2024-03-31T19:38:11.036019298-05:00 - INFO - key change1
+2024-03-31T19:38:11.036028628-05:00 - INFO - value "background = \"0x1a1a1a\""
+2024-03-31T19:38:11.036068958-05:00 - INFO - old value is "background = \"0x1a1a1a\""
+2024-03-31T19:38:11.036090287-05:00 - INFO - writing to file
+2024-03-31T19:38:11.036210086-05:00 - INFO - New value: background = "0x000000"
+2024-03-31T19:38:11.036249826-05:00 - INFO - 
+
+2024-03-31T19:38:11.036267326-05:00 - INFO - is bool true true
+2024-03-31T19:38:11.036294026-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"background = \\\"0x1a1a1a\\\"\",\n      \"new\": \"background = \\\"0x000000\\\"\"\n    }\n  }\n}","role":"assistant"}}],"created":1711931889,"id":"chatcmpl-98zybpIzfguAyqZnRonrGr2lPwB4P","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":48,"prompt_tokens":1098,"total_tokens":1146}}
+2024-03-31T19:38:11.036367435-05:00 - TRACE - client tx closed
+2024-03-31T19:38:11.036395625-05:00 - TRACE - State::close_read()
+2024-03-31T19:38:11.036416254-05:00 - TRACE - State::close_write()
+2024-03-31T19:38:11.036433344-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:38:11.036488974-05:00 - TRACE - shut down IO complete
+2024-03-31T19:38:35.280542796-05:00 - INFO - booting up
+2024-03-31T19:38:35.281846714-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fish_config", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-03-28 06:43:22.516949493 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }]
+2024-03-31T19:38:52.006970211-05:00 - INFO - booting up
+2024-03-31T19:38:52.008129980-05:00 - INFO - going to get all possible content
+2024-03-31T19:38:52.026299179-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:38:52.026362619-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:38:52.026399398-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:38:52.026503247-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:38:52.040365419-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-03-31T19:38:52.045179143-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-03-31T19:38:52.058908724-05:00 - TRACE - client handshake Http1
+2024-03-31T19:38:52.058941874-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:38:52.059062383-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:38:52.059133202-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:38:52.059203781-05:00 - TRACE - encode_headers;
+2024-03-31T19:38:52.059219701-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:38:52.059228521-05:00 - TRACE - Client::encode method=POST, body=Some(Known(323))
+2024-03-31T19:38:52.059254181-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:38:52.059262571-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:38:52.059272961-05:00 - TRACE - sized write, len = 323
+2024-03-31T19:38:52.059281860-05:00 - TRACE - buffer.flatten self.len=201 buf.len=323
+2024-03-31T19:38:52.059322430-05:00 - DEBUG - flushed 524 bytes
+2024-03-31T19:38:52.059336280-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:38:53.838321241-05:00 - TRACE - Conn::read_head
+2024-03-31T19:38:53.838518439-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:38:53.838538319-05:00 - TRACE - parse_headers;
+2024-03-31T19:38:53.838549209-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:38:53.838571129-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:38:53.838625078-05:00 - TRACE - Response.parse Complete(1202)
+2024-03-31T19:38:53.838703027-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:38:53.838715737-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:38:53.838725767-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:38:53.838735517-05:00 - DEBUG - incoming body is content-length (911 bytes)
+2024-03-31T19:38:53.838764147-05:00 - TRACE - decode; state=Length(911)
+2024-03-31T19:38:53.838785947-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(744)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:38:53.838880376-05:00 - TRACE - decode; state=Length(744)
+2024-03-31T19:38:53.838993825-05:00 - TRACE - received 744 bytes
+2024-03-31T19:38:53.839018704-05:00 - DEBUG - incoming body completed
+2024-03-31T19:38:53.839046584-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:38:53.839072114-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:53.839086644-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:53.839101374-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:38:53.839114844-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:38:53.839160223-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:38:53.839173983-05:00 - INFO - json response {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"1. Set a custom prompt for the fish shell\n2. Define custom aliases for commands\n3. Configure fish functions\n4. Set environment variables\n5. Customize the fish shell colors and theme\n6. Create key bindings for specific actions\n7. Configure auto-suggestions for command completion\n8. Define startup commands to run when opening a new shell\n9. Customize the fish shell history behavior\n10. Add directories to the fish shell's automatic cd list","role":"assistant"}}],"created":1711931932,"id":"chatcmpl-98zzIMHJLHJ0TbLMABzgxUQjZnim7","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":94,"prompt_tokens":49,"total_tokens":143}}
+2024-03-31T19:38:53.839264112-05:00 - TRACE - client tx closed
+2024-03-31T19:38:53.839281472-05:00 - TRACE - State::close_read()
+2024-03-31T19:38:53.839293262-05:00 - TRACE - State::close_write()
+2024-03-31T19:38:53.839304882-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:38:53.839338851-05:00 - TRACE - shut down IO complete
+2024-03-31T19:39:10.818487753-05:00 - INFO - booting up
+2024-03-31T19:39:10.819649973-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fish_config", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-03-28 06:43:22.516949493 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }]
+2024-03-31T19:39:59.980132434-05:00 - INFO - booting up
+2024-03-31T19:39:59.981315202-05:00 - INFO - alias was selected
+2024-03-31T19:39:59.981367392-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/fish/config.fish
+2024-03-31T19:39:59.999872699-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:39:59.999928669-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:39:59.999962009-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:40:00.000074028-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:40:00.016595642-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:40:00.023707715-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:40:00.036652615-05:00 - TRACE - client handshake Http1
+2024-03-31T19:40:00.036683824-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:40:00.036781404-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:40:00.036849673-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:40:00.036924162-05:00 - TRACE - encode_headers;
+2024-03-31T19:40:00.036940282-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:40:00.036948782-05:00 - TRACE - Client::encode method=POST, body=Some(Known(965))
+2024-03-31T19:40:00.036983202-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:40:00.036996182-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:40:00.037012461-05:00 - TRACE - sized write, len = 965
+2024-03-31T19:40:00.037024531-05:00 - TRACE - buffer.flatten self.len=201 buf.len=965
+2024-03-31T19:40:00.037071281-05:00 - DEBUG - flushed 1166 bytes
+2024-03-31T19:40:00.037086891-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:40:01.320934697-05:00 - TRACE - Conn::read_head
+2024-03-31T19:40:01.321130016-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:40:01.321149415-05:00 - TRACE - parse_headers;
+2024-03-31T19:40:01.321159975-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:40:01.321188205-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:40:01.321242295-05:00 - TRACE - Response.parse Complete(1201)
+2024-03-31T19:40:01.321317194-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:40:01.321329874-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:40:01.321339754-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:40:01.321349084-05:00 - DEBUG - incoming body is content-length (717 bytes)
+2024-03-31T19:40:01.321376863-05:00 - TRACE - decode; state=Length(717)
+2024-03-31T19:40:01.321398523-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(549)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:40:01.321428013-05:00 - TRACE - decode; state=Length(549)
+2024-03-31T19:40:01.321464213-05:00 - TRACE - received 549 bytes
+2024-03-31T19:40:01.321497042-05:00 - DEBUG - incoming body completed
+2024-03-31T19:40:01.321529262-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:40:01.321574932-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:01.321597261-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:01.321617871-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:40:01.321640011-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:40:01.321708800-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:01.321733110-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "Using the config below please create a alias name lsa which runs ls -ltrah",
+      "new": "Using the configuration provided, create an alias named lsa that executes ls -ltrah"
+    }
+  }
+}
+2024-03-31T19:40:01.321777650-05:00 - INFO - key change1
+2024-03-31T19:40:01.321789030-05:00 - INFO - value "Using the config below please create a alias name lsa which runs ls -ltrah"
+2024-03-31T19:40:01.321815859-05:00 - INFO - old value is "Using the config below please create a alias name lsa which runs ls -ltrah"
+2024-03-31T19:40:01.321827979-05:00 - INFO - New value: Using the configuration provided, create an alias named lsa that executes ls -ltrah
+2024-03-31T19:40:01.321850169-05:00 - INFO - 
+
+2024-03-31T19:40:01.321857429-05:00 - INFO - is bool true false
+2024-03-31T19:40:01.321884739-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"Using the config below please create a alias name lsa which runs ls -ltrah\",\n      \"new\": \"Using the configuration provided, create an alias named lsa that executes ls -ltrah\"\n    }\n  }\n}","role":"assistant"}}],"created":1711932000,"id":"chatcmpl-9900OdCxX3bAV7EJRsJ1yu0RjUDxZ","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":63,"prompt_tokens":192,"total_tokens":255}}
+2024-03-31T19:40:47.035462635-05:00 - INFO - booting up
+2024-03-31T19:40:47.036685264-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fish_config", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-03-28 06:43:22.516949493 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }]
+2024-03-31T19:40:54.204340348-05:00 - INFO - booting up
+2024-03-31T19:40:54.205597476-05:00 - INFO - alias was selected
+2024-03-31T19:40:54.205658926-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/fish/config.fish
+2024-03-31T19:40:54.224914306-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:40:54.224969666-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:40:54.225004685-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:40:54.225108374-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:40:54.229627922-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:40:54.238071533-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:40:54.253302431-05:00 - TRACE - client handshake Http1
+2024-03-31T19:40:54.253330010-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:40:54.253428240-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:40:54.253521079-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:40:54.253592508-05:00 - TRACE - encode_headers;
+2024-03-31T19:40:54.253609378-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:40:54.253618278-05:00 - TRACE - Client::encode method=POST, body=Some(Known(965))
+2024-03-31T19:40:54.253643277-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:40:54.253651427-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:40:54.253661857-05:00 - TRACE - sized write, len = 965
+2024-03-31T19:40:54.253670347-05:00 - TRACE - buffer.flatten self.len=201 buf.len=965
+2024-03-31T19:40:54.253716287-05:00 - DEBUG - flushed 1166 bytes
+2024-03-31T19:40:54.253729987-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:40:54.909289325-05:00 - TRACE - Conn::read_head
+2024-03-31T19:40:54.909582282-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:40:54.910882801-05:00 - TRACE - Conn::read_head
+2024-03-31T19:40:54.910940470-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:40:54.910958170-05:00 - TRACE - parse_headers;
+2024-03-31T19:40:54.910968360-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:40:54.910991930-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:40:54.911046609-05:00 - TRACE - Response.parse Complete(1201)
+2024-03-31T19:40:54.911122878-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:40:54.911135488-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:40:54.911145328-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:40:54.911155228-05:00 - DEBUG - incoming body is content-length (612 bytes)
+2024-03-31T19:40:54.911182878-05:00 - TRACE - decode; state=Length(612)
+2024-03-31T19:40:54.911204148-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(444)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:40:54.911430506-05:00 - TRACE - decode; state=Length(444)
+2024-03-31T19:40:54.911486355-05:00 - TRACE - received 444 bytes
+2024-03-31T19:40:54.911515105-05:00 - DEBUG - incoming body completed
+2024-03-31T19:40:54.911545575-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:40:54.911582784-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:54.911605404-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:54.911625854-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:40:54.911644964-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:40:54.911766233-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:40:54.911794682-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "",
+      "new": "Create a new alias named 'lsa' that runs 'ls -ltrah'"
+    }
+  }
+}
+2024-03-31T19:40:54.911830782-05:00 - INFO - key change1
+2024-03-31T19:40:54.911842322-05:00 - INFO - value ""
+2024-03-31T19:40:54.911871582-05:00 - INFO - old value is ""
+2024-03-31T19:40:54.911882982-05:00 - INFO - writing to file
+2024-03-31T19:40:54.912002091-05:00 - INFO - New value: Create a new alias named 'lsa' that runs 'ls -ltrah'
+2024-03-31T19:40:54.912043880-05:00 - INFO - 
+
+2024-03-31T19:40:54.912054040-05:00 - INFO - is bool true true
+2024-03-31T19:40:54.912085900-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"\",\n      \"new\": \"Create a new alias named 'lsa' that runs 'ls -ltrah'\"\n    }\n  }\n}","role":"assistant"}}],"created":1711932054,"id":"chatcmpl-9901Gw60V4DRxUmqSeVbhp9PbkS1c","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":43,"prompt_tokens":192,"total_tokens":235}}
+2024-03-31T19:40:54.912134149-05:00 - TRACE - client tx closed
+2024-03-31T19:40:54.912153509-05:00 - TRACE - State::close_read()
+2024-03-31T19:40:54.912166889-05:00 - TRACE - State::close_write()
+2024-03-31T19:40:54.912180249-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:40:54.912219979-05:00 - TRACE - shut down IO complete
+2024-03-31T19:41:31.278784012-05:00 - INFO - booting up
+2024-03-31T19:41:31.279990031-05:00 - INFO - user request this alias to be reverted fish_config 
+2024-03-31T19:41:31.280040201-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:41:31.280050280-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:41:31.280057240-05:00 - INFO - content alias is fish_config 
+2024-03-31T19:41:31.280072480-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:41:37.989652024-05:00 - INFO - booting up
+2024-03-31T19:41:37.990884163-05:00 - INFO - user request this alias to be reverted fish_config 
+2024-03-31T19:41:37.990940113-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:41:37.990951403-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:41:37.990958713-05:00 - INFO - content alias is fish_config 
+2024-03-31T19:41:37.990969603-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:41:47.641306926-05:00 - INFO - booting up
+2024-03-31T19:41:47.642492325-05:00 - INFO - user request this alias to be reverted fish_config 
+2024-03-31T19:41:47.642535754-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:41:47.642544764-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:41:47.642550424-05:00 - INFO - content alias is fish_config 
+2024-03-31T19:41:47.642559224-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:43:09.271093694-05:00 - INFO - booting up
+2024-03-31T19:43:09.272337692-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fish_config", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-03-28 06:43:22.516949493 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }]
+2024-03-31T19:45:41.385429197-05:00 - INFO - booting up
+2024-03-31T19:45:41.386600626-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }]
+2024-03-31T19:47:41.993762373-05:00 - INFO - booting up
+2024-03-31T19:47:41.994973302-05:00 - INFO - file content [{"alias":"alacritty.toml","realpath":"/home/osamanoo/.config/alacritty/alacritty.toml","iteration":1,"backup_location":"backup_config/alacritty.toml","ts":"2024-03-25 04:06:09.037046463 UTC"},{"alias":"fisher_fish","realpath":"/home/osamanoo/.config/fish/completions/fisher.fish","iteration":1,"backup_location":"backup_config/fisher.fish","ts":"2024-03-28 06:56:46.983009804 UTC"}]
+ 
+2024-03-31T19:47:41.995002262-05:00 - INFO - cfl content: [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }, ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }]
+2024-03-31T19:47:41.995073111-05:00 - INFO - could not find backup_config directory so a new one was created
+2024-03-31T19:47:41.995165960-05:00 - INFO - writing the follow file metadata to config_file.json ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }
+2024-03-31T19:47:44.936620911-05:00 - INFO - booting up
+2024-03-31T19:47:44.937852610-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }, ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }]
+2024-03-31T19:48:36.749809741-05:00 - INFO - booting up
+2024-03-31T19:48:36.750949550-05:00 - INFO - alias was selected
+2024-03-31T19:48:36.770202620-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:48:36.770264650-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:48:36.770295089-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:48:36.770410788-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:48:36.785987614-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-03-31T19:48:36.793183247-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-03-31T19:48:36.805929449-05:00 - TRACE - client handshake Http1
+2024-03-31T19:48:36.805965969-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:48:36.806060768-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:48:36.806130557-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:48:36.806206716-05:00 - TRACE - encode_headers;
+2024-03-31T19:48:36.806223206-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:48:36.806231916-05:00 - TRACE - Client::encode method=POST, body=Some(Known(875))
+2024-03-31T19:48:36.806256936-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:48:36.806265006-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:48:36.806284526-05:00 - TRACE - sized write, len = 875
+2024-03-31T19:48:36.806293626-05:00 - TRACE - buffer.flatten self.len=201 buf.len=875
+2024-03-31T19:48:36.806335335-05:00 - DEBUG - flushed 1076 bytes
+2024-03-31T19:48:36.806349375-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:48:37.626293762-05:00 - TRACE - Conn::read_head
+2024-03-31T19:48:37.626486470-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:48:37.626506080-05:00 - TRACE - parse_headers;
+2024-03-31T19:48:37.626516620-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:48:37.626538020-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:48:37.626601239-05:00 - TRACE - Response.parse Complete(1201)
+2024-03-31T19:48:37.626679098-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:48:37.626691698-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:48:37.626701318-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:48:37.626710848-05:00 - DEBUG - incoming body is content-length (594 bytes)
+2024-03-31T19:48:37.626739448-05:00 - TRACE - decode; state=Length(594)
+2024-03-31T19:48:37.626761807-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(426)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:48:37.626839017-05:00 - TRACE - decode; state=Length(426)
+2024-03-31T19:48:37.626938326-05:00 - TRACE - received 426 bytes
+2024-03-31T19:48:37.626964346-05:00 - DEBUG - incoming body completed
+2024-03-31T19:48:37.626991575-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:48:37.627031065-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:37.627049455-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:37.627067605-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:48:37.627084564-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:48:37.627142994-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:37.627160394-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "",
+      "new": "Create alias 'lsa' for 'ls -ltrah'"
+    }
+  }
+}
+2024-03-31T19:48:37.627179363-05:00 - TRACE - idle interval checking for expired
+2024-03-31T19:48:37.627212693-05:00 - INFO - key change1
+2024-03-31T19:48:37.627225493-05:00 - INFO - value ""
+2024-03-31T19:48:37.627410041-05:00 - TRACE - client tx closed
+2024-03-31T19:48:37.627443511-05:00 - TRACE - State::close_read()
+2024-03-31T19:48:37.627458701-05:00 - TRACE - State::close_write()
+2024-03-31T19:48:37.627471471-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:48:37.627508210-05:00 - TRACE - shut down IO complete
+2024-03-31T19:48:50.867628167-05:00 - INFO - booting up
+2024-03-31T19:48:50.868767452-05:00 - INFO - alias was selected
+2024-03-31T19:48:50.888161485-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:48:50.888221965-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:48:50.888258914-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:48:50.888368204-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:48:50.892886573-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:48:50.903273057-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:48:50.917704542-05:00 - TRACE - client handshake Http1
+2024-03-31T19:48:50.917730642-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:48:50.917825631-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:48:50.917892121-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:48:50.917963931-05:00 - TRACE - encode_headers;
+2024-03-31T19:48:50.917979551-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:48:50.917997091-05:00 - TRACE - Client::encode method=POST, body=Some(Known(875))
+2024-03-31T19:48:50.918024491-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:48:50.918032701-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:48:50.918043121-05:00 - TRACE - sized write, len = 875
+2024-03-31T19:48:50.918051560-05:00 - TRACE - buffer.flatten self.len=201 buf.len=875
+2024-03-31T19:48:50.918092650-05:00 - DEBUG - flushed 1076 bytes
+2024-03-31T19:48:50.918106190-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:48:53.294003835-05:00 - TRACE - Conn::read_head
+2024-03-31T19:48:53.294256834-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:48:53.294277524-05:00 - TRACE - parse_headers;
+2024-03-31T19:48:53.294288284-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:48:53.294310654-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:48:53.294367724-05:00 - TRACE - Response.parse Complete(1202)
+2024-03-31T19:48:53.294457233-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:48:53.294469663-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:48:53.294479633-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:48:53.294489103-05:00 - DEBUG - incoming body is content-length (726 bytes)
+2024-03-31T19:48:53.294525763-05:00 - TRACE - decode; state=Length(726)
+2024-03-31T19:48:53.294552993-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(559)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:48:53.294617152-05:00 - TRACE - decode; state=Length(559)
+2024-03-31T19:48:53.294661712-05:00 - TRACE - received 559 bytes
+2024-03-31T19:48:53.294677262-05:00 - DEBUG - incoming body completed
+2024-03-31T19:48:53.294708722-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:48:53.294748772-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:53.294770372-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:53.294792092-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:48:53.294813392-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:48:53.294883941-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:48:53.294903731-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "Using the config below please create a alias name lsa which runs ls -ltrah",
+      "new": "Using the config below, please create an alias named \"lsa\" that runs \"ls -ltrah\""
+    }
+  }
+}
+2024-03-31T19:48:53.294941741-05:00 - INFO - key change1
+2024-03-31T19:48:53.294951281-05:00 - INFO - value "Using the config below please create a alias name lsa which runs ls -ltrah"
+2024-03-31T19:48:53.295143390-05:00 - TRACE - client tx closed
+2024-03-31T19:48:53.295175360-05:00 - TRACE - State::close_read()
+2024-03-31T19:48:53.295193560-05:00 - TRACE - State::close_write()
+2024-03-31T19:48:53.295212840-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:48:53.295264559-05:00 - TRACE - shut down IO complete
+2024-03-31T19:49:01.507481586-05:00 - INFO - booting up
+2024-03-31T19:49:01.508692111-05:00 - INFO - alias was selected
+2024-03-31T19:49:01.508744811-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/fish/config.fish
+2024-03-31T19:49:01.528013153-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:49:01.528074982-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:49:01.528105602-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:49:01.528228202-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:49:01.532847022-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:49:01.544274460-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:49:01.560340797-05:00 - TRACE - client handshake Http1
+2024-03-31T19:49:01.560383267-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:49:01.560496746-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:49:01.560570966-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:49:01.560653365-05:00 - TRACE - encode_headers;
+2024-03-31T19:49:01.560669485-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:49:01.560678255-05:00 - TRACE - Client::encode method=POST, body=Some(Known(965))
+2024-03-31T19:49:01.560705365-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:49:01.560713505-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:49:01.560723875-05:00 - TRACE - sized write, len = 965
+2024-03-31T19:49:01.560732815-05:00 - TRACE - buffer.flatten self.len=201 buf.len=965
+2024-03-31T19:49:01.560775455-05:00 - DEBUG - flushed 1166 bytes
+2024-03-31T19:49:01.560789795-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:49:04.312820164-05:00 - TRACE - Conn::read_head
+2024-03-31T19:49:04.313079693-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:49:04.313102103-05:00 - TRACE - parse_headers;
+2024-03-31T19:49:04.313113213-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:49:04.313135613-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:49:04.313185233-05:00 - TRACE - Response.parse Complete(1202)
+2024-03-31T19:49:04.313276642-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:49:04.313289322-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:49:04.313299262-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:49:04.313308772-05:00 - DEBUG - incoming body is content-length (889 bytes)
+2024-03-31T19:49:04.313345832-05:00 - TRACE - decode; state=Length(889)
+2024-03-31T19:49:04.313373752-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(722)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:49:04.313474031-05:00 - TRACE - decode; state=Length(722)
+2024-03-31T19:49:04.313591121-05:00 - TRACE - received 722 bytes
+2024-03-31T19:49:04.313617121-05:00 - DEBUG - incoming body completed
+2024-03-31T19:49:04.313646491-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:49:04.313680890-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:49:04.313699240-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:49:04.313718790-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:49:04.313737640-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:49:04.313798250-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:49:04.313819600-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "",
+      "new": "Create an alias named 'lsa' that runs 'ls -ltrah'"
+    },
+    "change2": {
+      "old": "if status is-interactive\n    # Commands to run in interactive sessions can go here\nend",
+      "new": "if status is-interactive\n    alias lsa='ls -ltrah'\n    # Commands to run in interactive sessions can go here\nend"
+    }
+  }
+}
+2024-03-31T19:49:04.313853210-05:00 - TRACE - idle interval checking for expired
+2024-03-31T19:49:04.313885529-05:00 - INFO - key change1
+2024-03-31T19:49:04.313898469-05:00 - INFO - value ""
+2024-03-31T19:49:04.313925219-05:00 - INFO - old value is ""
+2024-03-31T19:49:04.313935079-05:00 - INFO - writing to file
+2024-03-31T19:49:04.314048139-05:00 - INFO - key change2
+2024-03-31T19:49:04.314062299-05:00 - INFO - value "if status is-interactive\n    # Commands to run in interactive sessions can go here\nend"
+2024-03-31T19:49:04.314088179-05:00 - INFO - old value is "if status is-interactive\n    # Commands to run in interactive sessions can go here\nend"
+2024-03-31T19:49:04.314104958-05:00 - INFO - New value: Create an alias named 'lsa' that runs 'ls -ltrah'
+2024-03-31T19:49:04.314121828-05:00 - INFO - 
+
+2024-03-31T19:49:04.314129278-05:00 - INFO - is bool true true
+2024-03-31T19:49:04.314168008-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"\",\n      \"new\": \"Create an alias named 'lsa' that runs 'ls -ltrah'\"\n    },\n    \"change2\": {\n      \"old\": \"if status is-interactive\\n    # Commands to run in interactive sessions can go here\\nend\",\n      \"new\": \"if status is-interactive\\n    alias lsa='ls -ltrah'\\n    # Commands to run in interactive sessions can go here\\nend\"\n    }\n  }\n}","role":"assistant"}}],"created":1711932541,"id":"chatcmpl-99097EGiqQVuhIFuMgYeKhKIollOh","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":111,"prompt_tokens":192,"total_tokens":303}}
+2024-03-31T19:49:30.897853448-05:00 - INFO - booting up
+2024-03-31T19:49:30.898958953-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }, ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }]
+2024-03-31T19:49:41.243635977-05:00 - INFO - booting up
+2024-03-31T19:49:41.244793631-05:00 - INFO - user request this alias to be reverted config_fish 
+2024-03-31T19:49:41.244833741-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:49:41.244843071-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:49:41.244848910-05:00 - INFO - content alias is fisher_fish 
+2024-03-31T19:49:41.244854130-05:00 - INFO - content alias is config_fish 
+2024-03-31T19:49:41.244941790-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:50:13.024617058-05:00 - INFO - booting up
+2024-03-31T19:50:13.025738092-05:00 - INFO - alias was selected
+2024-03-31T19:50:13.025787702-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/fish/config.fish
+2024-03-31T19:50:13.045624441-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:50:13.045683921-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:50:13.045714871-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:50:13.045823550-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:50:13.059213713-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-03-31T19:50:13.066513685-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-03-31T19:50:13.082162116-05:00 - TRACE - client handshake Http1
+2024-03-31T19:50:13.082196926-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:50:13.082297496-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:50:13.082367355-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:50:13.082444235-05:00 - TRACE - encode_headers;
+2024-03-31T19:50:13.082460635-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:50:13.082469665-05:00 - TRACE - Client::encode method=POST, body=Some(Known(971))
+2024-03-31T19:50:13.082495115-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:50:13.082503445-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:50:13.082513615-05:00 - TRACE - sized write, len = 971
+2024-03-31T19:50:13.082522285-05:00 - TRACE - buffer.flatten self.len=201 buf.len=971
+2024-03-31T19:50:13.082562764-05:00 - DEBUG - flushed 1172 bytes
+2024-03-31T19:50:13.082576564-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:50:15.419533296-05:00 - TRACE - Conn::read_head
+2024-03-31T19:50:15.419763054-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:50:15.419782204-05:00 - TRACE - parse_headers;
+2024-03-31T19:50:15.419791244-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:50:15.419810314-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:50:15.419852104-05:00 - TRACE - Response.parse Complete(1202)
+2024-03-31T19:50:15.419938564-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:50:15.419951583-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:50:15.419961583-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:50:15.419971143-05:00 - DEBUG - incoming body is content-length (581 bytes)
+2024-03-31T19:50:15.420008013-05:00 - TRACE - decode; state=Length(581)
+2024-03-31T19:50:15.420036733-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(414)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:50:15.420142582-05:00 - TRACE - decode; state=Length(414)
+2024-03-31T19:50:15.420245562-05:00 - TRACE - received 414 bytes
+2024-03-31T19:50:15.420260602-05:00 - DEBUG - incoming body completed
+2024-03-31T19:50:15.420293162-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:50:15.420331062-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:50:15.420349881-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:50:15.420370551-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:50:15.420389731-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:50:15.420451631-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:50:15.420480471-05:00 - INFO - text full json {
+	"results": {
+		"change1": {
+			"old": "",
+			"new": "alias lsa='ls -ltrah'"
+		}
+	}
+}
+2024-03-31T19:50:15.420542110-05:00 - INFO - key change1
+2024-03-31T19:50:15.420555500-05:00 - INFO - value ""
+2024-03-31T19:50:15.420586260-05:00 - INFO - old value is ""
+2024-03-31T19:50:15.420597210-05:00 - INFO - writing to file
+2024-03-31T19:50:15.420723310-05:00 - INFO - New value: alias lsa='ls -ltrah'
+2024-03-31T19:50:15.420756929-05:00 - INFO - 
+
+2024-03-31T19:50:15.420766529-05:00 - INFO - is bool true true
+2024-03-31T19:50:15.420798589-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n\t\"results\": {\n\t\t\"change1\": {\n\t\t\t\"old\": \"\",\n\t\t\t\"new\": \"alias lsa='ls -ltrah'\"\n\t\t}\n\t}\n}","role":"assistant"}}],"created":1711932613,"id":"chatcmpl-990AHOTSTqDsU70p4NZXwvjo3PflI","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":40,"prompt_tokens":194,"total_tokens":234}}
+2024-03-31T19:50:15.420878959-05:00 - TRACE - client tx closed
+2024-03-31T19:50:15.420907149-05:00 - TRACE - State::close_read()
+2024-03-31T19:50:15.420924629-05:00 - TRACE - State::close_write()
+2024-03-31T19:50:15.420943818-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:50:15.420985218-05:00 - TRACE - shut down IO complete
+2024-03-31T19:50:42.544843188-05:00 - INFO - booting up
+2024-03-31T19:50:42.546087841-05:00 - INFO - user request this alias to be reverted config_fish 
+2024-03-31T19:50:42.546130391-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:50:42.546138721-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:50:42.546144421-05:00 - INFO - content alias is fisher_fish 
+2024-03-31T19:50:42.546149371-05:00 - INFO - content alias is config_fish 
+2024-03-31T19:50:42.546231671-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T19:53:23.369706743-05:00 - INFO - booting up
+2024-03-31T19:53:23.370976805-05:00 - INFO - alias was selected
+2024-03-31T19:53:23.371034815-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-03-31T19:53:23.389882398-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T19:53:23.389947878-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T19:53:23.389980408-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T19:53:23.390078297-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T19:53:23.399342231-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-03-31T19:53:23.407598231-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-03-31T19:53:23.421341026-05:00 - TRACE - client handshake Http1
+2024-03-31T19:53:23.421367356-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T19:53:23.421464235-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T19:53:23.421545215-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T19:53:23.421624224-05:00 - TRACE - encode_headers;
+2024-03-31T19:53:23.421644334-05:00 - TRACE - -> encode_headers;
+2024-03-31T19:53:23.421652944-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3970))
+2024-03-31T19:53:23.421677304-05:00 - TRACE - <- encode_headers;
+2024-03-31T19:53:23.421685444-05:00 - TRACE - -- encode_headers;
+2024-03-31T19:53:23.421695674-05:00 - TRACE - sized write, len = 3970
+2024-03-31T19:53:23.421703934-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3970
+2024-03-31T19:53:23.421759733-05:00 - DEBUG - flushed 4172 bytes
+2024-03-31T19:53:23.421774323-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:53:27.729979239-05:00 - TRACE - Conn::read_head
+2024-03-31T19:53:27.730302227-05:00 - TRACE - received 1369 bytes
+2024-03-31T19:53:27.730329587-05:00 - TRACE - parse_headers;
+2024-03-31T19:53:27.730343746-05:00 - TRACE - -> parse_headers;
+2024-03-31T19:53:27.730374906-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T19:53:27.730443646-05:00 - TRACE - Response.parse Complete(1203)
+2024-03-31T19:53:27.730550845-05:00 - TRACE - <- parse_headers;
+2024-03-31T19:53:27.730567365-05:00 - TRACE - -- parse_headers;
+2024-03-31T19:53:27.730580625-05:00 - DEBUG - parsed 24 headers
+2024-03-31T19:53:27.730593215-05:00 - DEBUG - incoming body is content-length (980 bytes)
+2024-03-31T19:53:27.730638835-05:00 - TRACE - decode; state=Length(980)
+2024-03-31T19:53:27.730674334-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(814)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T19:53:27.730788194-05:00 - TRACE - decode; state=Length(814)
+2024-03-31T19:53:27.730917213-05:00 - TRACE - received 814 bytes
+2024-03-31T19:53:27.730928773-05:00 - DEBUG - incoming body completed
+2024-03-31T19:53:27.730954533-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T19:53:27.730983602-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:53:27.730998082-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:53:27.731013442-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T19:53:27.731029162-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T19:53:27.731094212-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T19:53:27.731109442-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "black = \"0x000000\"",
+      "new": "black = \"0xdc322f\""
+    },
+    "change2": {
+      "old": "cursor = \"0x93a1a1\"",
+      "new": "cursor = \"0xdc322f\""
+    },
+    "change3": {
+      "old": "white = \"0x93a1a1\"",
+      "new": "white = \"0xdc322f\""
+    },
+    "change4": {
+      "old": "background = \"0x000000\"",
+      "new": "background = \"0xdc322f\""
+    }
+  }
+}
+2024-03-31T19:53:27.731166811-05:00 - INFO - key change1
+2024-03-31T19:53:27.731176961-05:00 - INFO - value "black = \"0x000000\""
+2024-03-31T19:53:27.731204071-05:00 - INFO - old value is "black = \"0x000000\""
+2024-03-31T19:53:27.731215711-05:00 - INFO - writing to file
+2024-03-31T19:53:27.731321520-05:00 - INFO - key change2
+2024-03-31T19:53:27.731334840-05:00 - INFO - value "cursor = \"0x93a1a1\""
+2024-03-31T19:53:27.731367430-05:00 - INFO - old value is "cursor = \"0x93a1a1\""
+2024-03-31T19:53:27.731377390-05:00 - INFO - writing to file
+2024-03-31T19:53:27.731928266-05:00 - INFO - key change3
+2024-03-31T19:53:27.731943296-05:00 - INFO - value "white = \"0x93a1a1\""
+2024-03-31T19:53:27.731960886-05:00 - INFO - old value is "white = \"0x93a1a1\""
+2024-03-31T19:53:27.731978476-05:00 - INFO - writing to file
+2024-03-31T19:53:27.732037976-05:00 - INFO - key change4
+2024-03-31T19:53:27.732052956-05:00 - INFO - value "background = \"0x000000\""
+2024-03-31T19:53:27.732078375-05:00 - INFO - old value is "background = \"0x000000\""
+2024-03-31T19:53:27.732093065-05:00 - INFO - writing to file
+2024-03-31T19:53:27.732160785-05:00 - INFO - New value: black = "0xdc322f"
+2024-03-31T19:53:27.732180105-05:00 - TRACE - idle interval checking for expired
+2024-03-31T19:53:27.732210265-05:00 - INFO - 
+
+2024-03-31T19:53:27.732221755-05:00 - INFO - is bool true true
+2024-03-31T19:53:27.732250704-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"black = \\\"0x000000\\\"\",\n      \"new\": \"black = \\\"0xdc322f\\\"\"\n    },\n    \"change2\": {\n      \"old\": \"cursor = \\\"0x93a1a1\\\"\",\n      \"new\": \"cursor = \\\"0xdc322f\\\"\"\n    },\n    \"change3\": {\n      \"old\": \"white = \\\"0x93a1a1\\\"\",\n      \"new\": \"white = \\\"0xdc322f\\\"\"\n    },\n    \"change4\": {\n      \"old\": \"background = \\\"0x000000\\\"\",\n      \"new\": \"background = \\\"0xdc322f\\\"\"\n    }\n  }\n}","role":"assistant"}}],"created":1711932803,"id":"chatcmpl-990DLNBhrMF6Sgpb1H3A7lO374sa5","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":155,"prompt_tokens":1093,"total_tokens":1248}}
+2024-03-31T19:53:27.732303764-05:00 - TRACE - client tx closed
+2024-03-31T19:53:27.732327064-05:00 - TRACE - State::close_read()
+2024-03-31T19:53:27.732340084-05:00 - TRACE - State::close_write()
+2024-03-31T19:53:27.732351954-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-03-31T19:53:27.732399893-05:00 - TRACE - shut down IO complete
+2024-03-31T19:53:44.384119356-05:00 - INFO - booting up
+2024-03-31T19:53:44.385279799-05:00 - INFO - user request this alias to be reverted alacritty.toml 
+2024-03-31T19:53:44.385322409-05:00 - INFO - checking if alias exist, so it could be reverted
+2024-03-31T19:53:44.385331259-05:00 - INFO - content alias is alacritty.toml 
+2024-03-31T19:53:44.385437458-05:00 - INFO - sucessfully reverted the original file to its backup file
+2024-03-31T20:04:53.438784062-05:00 - INFO - booting up
+2024-03-31T20:05:01.303576134-05:00 - INFO - booting up
+2024-03-31T20:05:01.304747725-05:00 - INFO - file content [{"alias":"alacritty.toml","realpath":"/home/osamanoo/.config/alacritty/alacritty.toml","iteration":1,"backup_location":"backup_config/alacritty.toml","ts":"2024-03-25 04:06:09.037046463 UTC"},{"alias":"fisher_fish","realpath":"/home/osamanoo/.config/fish/completions/fisher.fish","iteration":1,"backup_location":"backup_config/fisher.fish","ts":"2024-03-28 06:56:46.983009804 UTC"},{"alias":"config_fish","realpath":"/home/osamanoo/.config/fish/config.fish","iteration":1,"backup_location":"backup_config/config.fish","ts":"2024-04-01 00:47:41.994998382 UTC"}] 
+2024-03-31T20:05:01.304776724-05:00 - INFO - cfl content: [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }, ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }, ConfigFile { alias: "bashrc", realpath: "/home/osamanoo/.bashrc", iteration: 1, backup_location: "backup_config/.bashrc", ts: "2024-04-01 01:05:01.304772974 UTC" }]
+2024-03-31T20:05:01.304858214-05:00 - INFO - could not find backup_config directory so a new one was created
+2024-03-31T20:05:01.304952443-05:00 - INFO - writing the follow file metadata to config_file.json ConfigFile { alias: "bashrc", realpath: "/home/osamanoo/.bashrc", iteration: 1, backup_location: "backup_config/.bashrc", ts: "2024-04-01 01:05:01.304772974 UTC" }
+2024-03-31T20:06:11.385822476-05:00 - INFO - booting up
+2024-03-31T20:06:11.386951407-05:00 - INFO - list of all aliases [ConfigFile { alias: "alacritty.toml", realpath: "/home/osamanoo/.config/alacritty/alacritty.toml", iteration: 1, backup_location: "backup_config/alacritty.toml", ts: "2024-03-25 04:06:09.037046463 UTC" }, ConfigFile { alias: "fisher_fish", realpath: "/home/osamanoo/.config/fish/completions/fisher.fish", iteration: 1, backup_location: "backup_config/fisher.fish", ts: "2024-03-28 06:56:46.983009804 UTC" }, ConfigFile { alias: "config_fish", realpath: "/home/osamanoo/.config/fish/config.fish", iteration: 1, backup_location: "backup_config/config.fish", ts: "2024-04-01 00:47:41.994998382 UTC" }, ConfigFile { alias: "bashrc", realpath: "/home/osamanoo/.bashrc", iteration: 1, backup_location: "backup_config/.bashrc", ts: "2024-04-01 01:05:01.304772974 UTC" }]
+2024-03-31T20:07:24.080723852-05:00 - INFO - booting up
+2024-03-31T20:07:24.081936883-05:00 - INFO - alias was selected
+2024-03-31T20:07:24.081995382-05:00 - INFO - the final_file_path being used is /home/osamanoo/.bashrc
+2024-03-31T20:07:24.100383023-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-03-31T20:07:24.100441443-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-03-31T20:07:24.100473572-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-03-31T20:07:24.100581472-05:00 - DEBUG - resolving host="api.openai.com"
+2024-03-31T20:07:24.114882608-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-03-31T20:07:24.120687511-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-03-31T20:07:24.137009630-05:00 - TRACE - client handshake Http1
+2024-03-31T20:07:24.137037080-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-03-31T20:07:24.137136249-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-03-31T20:07:24.137209589-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-03-31T20:07:24.137285538-05:00 - TRACE - encode_headers;
+2024-03-31T20:07:24.137301478-05:00 - TRACE - -> encode_headers;
+2024-03-31T20:07:24.137310068-05:00 - TRACE - Client::encode method=POST, body=Some(Known(5187))
+2024-03-31T20:07:24.137335428-05:00 - TRACE - <- encode_headers;
+2024-03-31T20:07:24.137343718-05:00 - TRACE - -- encode_headers;
+2024-03-31T20:07:24.137354367-05:00 - TRACE - sized write, len = 5187
+2024-03-31T20:07:24.137363107-05:00 - TRACE - buffer.flatten self.len=202 buf.len=5187
+2024-03-31T20:07:24.137415237-05:00 - DEBUG - flushed 5389 bytes
+2024-03-31T20:07:24.137428687-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-03-31T20:07:29.466977360-05:00 - TRACE - Conn::read_head
+2024-03-31T20:07:29.467210098-05:00 - TRACE - received 1369 bytes
+2024-03-31T20:07:29.467230138-05:00 - TRACE - parse_headers;
+2024-03-31T20:07:29.467239768-05:00 - TRACE - -> parse_headers;
+2024-03-31T20:07:29.467260338-05:00 - TRACE - Response.parse bytes=1369
+2024-03-31T20:07:29.467302228-05:00 - TRACE - Response.parse Complete(1203)
+2024-03-31T20:07:29.467375457-05:00 - TRACE - <- parse_headers;
+2024-03-31T20:07:29.467385437-05:00 - TRACE - -- parse_headers;
+2024-03-31T20:07:29.467393677-05:00 - DEBUG - parsed 24 headers
+2024-03-31T20:07:29.467401577-05:00 - DEBUG - incoming body is content-length (841 bytes)
+2024-03-31T20:07:29.467444346-05:00 - TRACE - decode; state=Length(841)
+2024-03-31T20:07:29.467470786-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(675)), writing: KeepAlive, keep_alive: Busy }
+2024-03-31T20:07:29.467538466-05:00 - TRACE - decode; state=Length(675)
+2024-03-31T20:07:29.467575915-05:00 - TRACE - received 675 bytes
+2024-03-31T20:07:29.467588915-05:00 - DEBUG - incoming body completed
+2024-03-31T20:07:29.467613895-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-03-31T20:07:29.467648465-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T20:07:29.467666805-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T20:07:29.467685774-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-03-31T20:07:29.467704614-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-03-31T20:07:29.467766414-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-03-31T20:07:29.467781194-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "alias l='ls -CF'",
+      "new": "alias l='ls -CF'"
+    },
+    "change2": {
+      "old": "alias ll='ls -alF'",
+      "new": "alias ll='ls -alF'"
+    },
+    "change3": {
+      "old": "# some more ls aliases",
+      "new": "# some more ls aliases\nalias lsa='ls -ltrha'"
+    }
+  }
+}
+2024-03-31T20:07:29.467824083-05:00 - INFO - key change1
+2024-03-31T20:07:29.467833743-05:00 - INFO - value "alias l='ls -CF'"
+2024-03-31T20:07:29.467860543-05:00 - INFO - old value is "alias l='ls -CF'"
+2024-03-31T20:07:29.467881343-05:00 - INFO - writing to file
+2024-03-31T20:07:29.468864925-05:00 - TRACE - idle interval checking for expired
+2024-03-31T20:07:29.468944674-05:00 - INFO - key change2
+2024-03-31T20:07:29.468964044-05:00 - INFO - value "alias ll='ls -alF'"
+2024-03-31T20:07:29.468985154-05:00 - INFO - old value is "alias ll='ls -alF'"
+2024-03-31T20:07:29.468997704-05:00 - INFO - writing to file
+2024-03-31T20:07:29.469081843-05:00 - INFO - key change3
+2024-03-31T20:07:29.469103763-05:00 - INFO - value "# some more ls aliases"
+2024-03-31T20:07:29.469128023-05:00 - INFO - old value is "# some more ls aliases"
+2024-03-31T20:07:29.469143513-05:00 - INFO - writing to file
+2024-03-31T20:07:29.469224482-05:00 - INFO - New value: alias l='ls -CF'
+2024-03-31T20:07:29.469258552-05:00 - INFO - 
+
+2024-03-31T20:07:29.469271702-05:00 - INFO - is bool true true
+2024-03-31T20:07:29.469302691-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"alias l='ls -CF'\",\n      \"new\": \"alias l='ls -CF'\"\n    },\n    \"change2\": {\n      \"old\": \"alias ll='ls -alF'\",\n      \"new\": \"alias ll='ls -alF'\"\n    },\n    \"change3\": {\n      \"old\": \"# some more ls aliases\",\n      \"new\": \"# some more ls aliases\\nalias lsa='ls -ltrha'\"\n    }\n  }\n}","role":"assistant"}}],"created":1711933644,"id":"chatcmpl-990QudLM5FEQuaf8CzbA4IPYW32r3","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_3bc1b5746c","usage":{"completion_tokens":112,"prompt_tokens":1419,"total_tokens":1531}}
+2024-04-03T22:57:46.650021278-05:00 - INFO - booting up
+2024-04-03T22:59:58.508965632-05:00 - INFO - booting up
+2024-04-03T23:09:29.371209877-05:00 - INFO - booting up
+2024-04-03T23:09:29.372396558-05:00 - INFO - alias was selected
+2024-04-03T23:09:29.372625326-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:09:29.392567057-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:09:29.392625857-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:09:29.392656997-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:09:29.392753866-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:09:29.406724507-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-04-03T23:09:29.415030799-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-04-03T23:09:29.428191297-05:00 - TRACE - client handshake Http1
+2024-04-03T23:09:29.428241847-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:09:29.428348496-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:09:29.428447465-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:09:29.428544395-05:00 - TRACE - encode_headers;
+2024-04-03T23:09:29.428561905-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:09:29.428570935-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3895))
+2024-04-03T23:09:29.428596924-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:09:29.428605404-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:09:29.428616334-05:00 - TRACE - sized write, len = 3895
+2024-04-03T23:09:29.428625174-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3895
+2024-04-03T23:09:29.428679484-05:00 - DEBUG - flushed 4097 bytes
+2024-04-03T23:09:29.428694464-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:09:30.495203388-05:00 - TRACE - Conn::read_head
+2024-04-03T23:09:30.495392406-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:09:30.495411076-05:00 - TRACE - parse_headers;
+2024-04-03T23:09:30.495421576-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:09:30.495445516-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:09:30.495498806-05:00 - TRACE - Response.parse Complete(1202)
+2024-04-03T23:09:30.495574195-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:09:30.495586435-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:09:30.495596205-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:09:30.495605505-05:00 - DEBUG - incoming body is content-length (589 bytes)
+2024-04-03T23:09:30.495632615-05:00 - TRACE - decode; state=Length(589)
+2024-04-03T23:09:30.495654185-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:09:30.495743744-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:09:30.495883353-05:00 - TRACE - received 422 bytes
+2024-04-03T23:09:30.495901423-05:00 - DEBUG - incoming body completed
+2024-04-03T23:09:30.495936203-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:09:30.495972022-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:09:30.495989982-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:09:30.496007902-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:09:30.496023392-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:09:30.496121951-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:09:30.496139101-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.8",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:09:30.496186501-05:00 - INFO - key change1
+2024-04-03T23:09:30.496197311-05:00 - INFO - value "opacity = 0.8"
+2024-04-03T23:09:30.496226101-05:00 - INFO - old value is "opacity = 0.8"
+2024-04-03T23:09:30.496244391-05:00 - INFO - writing to file
+2024-04-03T23:09:30.496369100-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:09:30.496409779-05:00 - INFO - 
+
+2024-04-03T23:09:30.496424829-05:00 - INFO - is bool true true
+2024-04-03T23:09:30.496455819-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.8\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712203769,"id":"chatcmpl-9A8hl7TDqdfuqJ1wKyzRcHM7jrZjt","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:12:14.988850202-05:00 - INFO - booting up
+2024-04-03T23:12:14.989980603-05:00 - INFO - alias was selected
+2024-04-03T23:12:14.990035273-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:12:15.009301930-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:12:15.009358810-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:12:15.009392490-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:12:15.009499219-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:12:15.027576004-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:12:15.033949947-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:12:15.048911136-05:00 - TRACE - client handshake Http1
+2024-04-03T23:12:15.048959456-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:12:15.049068805-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:12:15.049139454-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:12:15.049235494-05:00 - TRACE - encode_headers;
+2024-04-03T23:12:15.049252284-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:12:15.049261343-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:12:15.049286993-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:12:15.049296103-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:12:15.049307123-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:12:15.049316183-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:12:15.049372403-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:12:15.049387843-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:12:16.078099451-05:00 - TRACE - Conn::read_head
+2024-04-03T23:12:16.078379679-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:12:16.078482308-05:00 - TRACE - Conn::read_head
+2024-04-03T23:12:16.078506038-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:12:16.078515568-05:00 - TRACE - parse_headers;
+2024-04-03T23:12:16.078521898-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:12:16.078538808-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:12:16.078570948-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:12:16.078634787-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:12:16.078646687-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:12:16.078653337-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:12:16.078659507-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:12:16.078682957-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:12:16.078699297-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:12:16.078774076-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:12:16.078867225-05:00 - TRACE - received 422 bytes
+2024-04-03T23:12:16.078880975-05:00 - DEBUG - incoming body completed
+2024-04-03T23:12:16.078907715-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:12:16.078939895-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:16.078957305-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:16.078975375-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:12:16.078992105-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:12:16.079048974-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:16.079061174-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.80"
+    }
+  }
+}
+2024-04-03T23:12:16.079104004-05:00 - INFO - key change1
+2024-04-03T23:12:16.079113504-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:12:16.079137113-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:12:16.079152873-05:00 - INFO - writing to file
+2024-04-03T23:12:16.079248643-05:00 - INFO - New value: opacity = 0.80
+2024-04-03T23:12:16.079280712-05:00 - INFO - 
+
+2024-04-03T23:12:16.079291652-05:00 - INFO - is bool true true
+2024-04-03T23:12:16.079318402-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.80\"\n    }\n  }\n}","role":"assistant"}}],"created":1712203935,"id":"chatcmpl-9A8kRYYlqm14IMO2a2ig4SN3ekWDG","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:12:22.121828920-05:00 - INFO - booting up
+2024-04-03T23:12:22.123019101-05:00 - INFO - alias was selected
+2024-04-03T23:12:22.123074440-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:12:22.142017769-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:12:22.142073558-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:12:22.142104648-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:12:22.142225107-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:12:22.146706015-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-04-03T23:12:22.154241629-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-04-03T23:12:22.164552542-05:00 - TRACE - client handshake Http1
+2024-04-03T23:12:22.164584221-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:12:22.164686631-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:12:22.164782250-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:12:22.164859019-05:00 - TRACE - encode_headers;
+2024-04-03T23:12:22.164874799-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:12:22.164883339-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:12:22.164908349-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:12:22.164916809-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:12:22.164927009-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:12:22.164940049-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:12:22.164991098-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:12:22.165005028-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:12:23.449235991-05:00 - TRACE - Conn::read_head
+2024-04-03T23:12:23.449480529-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:12:23.449500839-05:00 - TRACE - parse_headers;
+2024-04-03T23:12:23.449511559-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:12:23.449536819-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:12:23.449587108-05:00 - TRACE - Response.parse Complete(1203)
+2024-04-03T23:12:23.449670508-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:12:23.449682398-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:12:23.449692318-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:12:23.449701887-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:12:23.449737827-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:12:23.449766027-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(424)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:12:23.449833127-05:00 - TRACE - decode; state=Length(424)
+2024-04-03T23:12:23.449875546-05:00 - TRACE - received 424 bytes
+2024-04-03T23:12:23.449891226-05:00 - DEBUG - incoming body completed
+2024-04-03T23:12:23.449920486-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:12:23.449984705-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:23.450013265-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:23.450039625-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:12:23.450061135-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:12:23.450132104-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:12:23.450151244-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.80",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:12:23.450186904-05:00 - INFO - key change1
+2024-04-03T23:12:23.450196074-05:00 - INFO - value "opacity = 0.80"
+2024-04-03T23:12:23.450223344-05:00 - INFO - old value is "opacity = 0.80"
+2024-04-03T23:12:23.450239543-05:00 - INFO - writing to file
+2024-04-03T23:12:23.450357573-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:12:23.450395792-05:00 - INFO - 
+
+2024-04-03T23:12:23.450404042-05:00 - INFO - is bool true true
+2024-04-03T23:12:23.450429672-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.80\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712203942,"id":"chatcmpl-9A8kY1rfWwyC0eVWtqNbocllpSScC","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:13:49.422440038-05:00 - INFO - booting up
+2024-04-03T23:13:49.423697068-05:00 - INFO - alias was selected
+2024-04-03T23:13:49.423806837-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:13:49.444112782-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:13:49.444167611-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:13:49.444201121-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:13:49.444304960-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:13:49.454786390-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:13:49.462974109-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:13:49.482825557-05:00 - TRACE - client handshake Http1
+2024-04-03T23:13:49.482854877-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:13:49.482953336-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:13:49.483022586-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:13:49.483092865-05:00 - TRACE - encode_headers;
+2024-04-03T23:13:49.483108635-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:13:49.483117355-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:13:49.483141795-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:13:49.483150225-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:13:49.483160315-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:13:49.483169245-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:13:49.483221274-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:13:49.483235484-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:13:50.797295697-05:00 - TRACE - Conn::read_head
+2024-04-03T23:13:50.797535945-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:13:50.797558945-05:00 - TRACE - parse_headers;
+2024-04-03T23:13:50.797570035-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:13:50.797592495-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:13:50.797649384-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:13:50.797734524-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:13:50.797746944-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:13:50.797767714-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:13:50.797779543-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:13:50.797818143-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:13:50.797843633-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:13:50.797932292-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:13:50.798050871-05:00 - TRACE - received 422 bytes
+2024-04-03T23:13:50.798084131-05:00 - DEBUG - incoming body completed
+2024-04-03T23:13:50.798116321-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:13:50.798150831-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:13:50.798169130-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:13:50.798188130-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:13:50.798205410-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:13:50.798265570-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:13:50.798293610-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:13:50.798335569-05:00 - INFO - key change1
+2024-04-03T23:13:50.798347059-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:13:50.798385749-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:13:50.798405429-05:00 - INFO - writing to file
+2024-04-03T23:13:50.798560337-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:13:50.798603147-05:00 - INFO - 
+
+2024-04-03T23:13:50.798613447-05:00 - INFO - is bool true true
+2024-04-03T23:13:50.798643507-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204030,"id":"chatcmpl-9A8lySScf9WpTTWV7l5fgA37DlFp2","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:16:09.187546408-05:00 - INFO - booting up
+2024-04-03T23:16:09.189176505-05:00 - INFO - alias was selected
+2024-04-03T23:16:09.189236915-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:16:09.217921570-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:16:09.218039909-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:16:09.218090749-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:16:09.218212738-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:16:09.236563424-05:00 - DEBUG - connecting to 104.18.6.192:443
+2024-04-03T23:16:09.243797468-05:00 - DEBUG - connected to 104.18.6.192:443
+2024-04-03T23:16:09.261325961-05:00 - TRACE - client handshake Http1
+2024-04-03T23:16:09.261375150-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:16:09.261488689-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:16:09.261562879-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:16:09.261653878-05:00 - TRACE - encode_headers;
+2024-04-03T23:16:09.261671358-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:16:09.261680328-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:16:09.261706028-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:16:09.261714638-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:16:09.261725038-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:16:09.261733948-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:16:09.261794367-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:16:09.261809777-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:16:10.267690971-05:00 - TRACE - Conn::read_head
+2024-04-03T23:16:10.267912689-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:16:10.267932639-05:00 - TRACE - parse_headers;
+2024-04-03T23:16:10.267943149-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:16:10.267965539-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:16:10.268015619-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:16:10.268105338-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:16:10.268118058-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:16:10.268127968-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:16:10.268137348-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:16:10.268169767-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:16:10.268195867-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:16:10.268284487-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:16:10.268385596-05:00 - TRACE - received 422 bytes
+2024-04-03T23:16:10.268400316-05:00 - DEBUG - incoming body completed
+2024-04-03T23:16:10.268438445-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:16:10.268472965-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:10.268491355-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:10.268510125-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:16:10.268526995-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:16:10.268584794-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:10.268612134-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:16:10.268660044-05:00 - INFO - key change1
+2024-04-03T23:16:10.268671304-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:16:10.268702773-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:16:10.268722293-05:00 - INFO - writing to file
+2024-04-03T23:16:10.268848022-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:16:10.268892752-05:00 - INFO - 
+
+2024-04-03T23:16:10.268902772-05:00 - INFO - is bool true true
+2024-04-03T23:16:10.268934062-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204169,"id":"chatcmpl-9A8oDw5Bzf6mHxLG5y0NQ3fTzggLP","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:16:14.805570077-05:00 - INFO - booting up
+2024-04-03T23:16:14.806708708-05:00 - INFO - alias was selected
+2024-04-03T23:16:14.806759298-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:16:14.825311052-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:16:14.825365302-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:16:14.825398412-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:16:14.825503721-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:16:14.830042286-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:16:14.839377453-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:16:14.855056371-05:00 - TRACE - client handshake Http1
+2024-04-03T23:16:14.855085210-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:16:14.855194469-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:16:14.855340458-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:16:14.855411428-05:00 - TRACE - encode_headers;
+2024-04-03T23:16:14.855428138-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:16:14.855436887-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:16:14.855460997-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:16:14.855469167-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:16:14.855479247-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:16:14.855487487-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:16:14.855539287-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:16:14.855552927-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:16:15.764668961-05:00 - TRACE - Conn::read_head
+2024-04-03T23:16:15.764895079-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:16:15.764916719-05:00 - TRACE - parse_headers;
+2024-04-03T23:16:15.764927629-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:16:15.764949459-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:16:15.765006668-05:00 - TRACE - Response.parse Complete(1203)
+2024-04-03T23:16:15.765087158-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:16:15.765099607-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:16:15.765109807-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:16:15.765119147-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:16:15.765149667-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:16:15.765174007-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(424)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:16:15.765348656-05:00 - TRACE - decode; state=Length(424)
+2024-04-03T23:16:15.765517944-05:00 - TRACE - received 424 bytes
+2024-04-03T23:16:15.765536174-05:00 - DEBUG - incoming body completed
+2024-04-03T23:16:15.765572064-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:16:15.765611693-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:15.765633483-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:15.765655663-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:16:15.765675053-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:16:15.765742682-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:16:15.765759682-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:16:15.765788852-05:00 - INFO - key change1
+2024-04-03T23:16:15.765797992-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:16:15.765838052-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:16:15.765854082-05:00 - INFO - writing to file
+2024-04-03T23:16:15.765966021-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:16:15.766019160-05:00 - INFO - 
+
+2024-04-03T23:16:15.766028210-05:00 - INFO - is bool true true
+2024-04-03T23:16:15.766052950-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204175,"id":"chatcmpl-9A8oJCj7fzKPYxHXAMt2XcAFLxtWU","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:16:15.766136639-05:00 - TRACE - client tx closed
+2024-04-03T23:16:15.766167599-05:00 - TRACE - State::close_read()
+2024-04-03T23:16:15.766182919-05:00 - TRACE - State::close_write()
+2024-04-03T23:16:15.766197839-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:16:15.766263098-05:00 - TRACE - shut down IO complete
+2024-04-03T23:17:05.559819082-05:00 - INFO - booting up
+2024-04-03T23:17:05.561007603-05:00 - INFO - alias was selected
+2024-04-03T23:17:05.561061343-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:17:05.581085885-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:17:05.581145024-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:17:05.581177204-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:17:05.581278463-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:17:05.585167233-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:17:05.591839210-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:17:05.603243671-05:00 - TRACE - client handshake Http1
+2024-04-03T23:17:05.603277620-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:17:05.603373630-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:17:05.603482889-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:17:05.603557268-05:00 - TRACE - encode_headers;
+2024-04-03T23:17:05.603573498-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:17:05.603582418-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:17:05.603607848-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:17:05.603615968-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:17:05.603625868-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:17:05.603638858-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:17:05.603690817-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:17:05.603705067-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:17:06.690439951-05:00 - TRACE - Conn::read_head
+2024-04-03T23:17:06.690628670-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:17:06.690645250-05:00 - TRACE - parse_headers;
+2024-04-03T23:17:06.690654020-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:17:06.690673179-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:17:06.690720009-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:17:06.690786529-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:17:06.690796339-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:17:06.690804668-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:17:06.690812528-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:17:06.690841438-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:17:06.690863858-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:17:06.690976617-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:17:06.691105246-05:00 - TRACE - received 422 bytes
+2024-04-03T23:17:06.691123176-05:00 - DEBUG - incoming body completed
+2024-04-03T23:17:06.691157396-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:17:06.691188736-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:06.691206015-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:06.691223685-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:17:06.691239845-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:17:06.691297525-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:06.691312685-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:17:06.691350734-05:00 - INFO - key change1
+2024-04-03T23:17:06.691359454-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:17:06.691401204-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:17:06.691417334-05:00 - INFO - writing to file
+2024-04-03T23:17:06.691518953-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:17:06.691552953-05:00 - INFO - 
+
+2024-04-03T23:17:06.691560623-05:00 - INFO - is bool true true
+2024-04-03T23:17:06.691585873-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204226,"id":"chatcmpl-9A8p8HiT2uSHJk0f8Sfe5noCPJwgb","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:17:06.691636542-05:00 - TRACE - client tx closed
+2024-04-03T23:17:06.691653172-05:00 - TRACE - State::close_read()
+2024-04-03T23:17:06.691664262-05:00 - TRACE - State::close_write()
+2024-04-03T23:17:06.691676102-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:17:06.691715452-05:00 - TRACE - shut down IO complete
+2024-04-03T23:17:19.871134708-05:00 - INFO - booting up
+2024-04-03T23:17:19.872290109-05:00 - INFO - alias was selected
+2024-04-03T23:17:19.872343439-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:17:19.890691484-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:17:19.890747274-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:17:19.890781624-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:17:19.890877703-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:17:24.932804763-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:17:24.940399553-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:17:24.953124742-05:00 - TRACE - client handshake Http1
+2024-04-03T23:17:24.953171702-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:17:24.953320161-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:17:24.953492599-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:17:24.953622948-05:00 - TRACE - encode_headers;
+2024-04-03T23:17:24.953643568-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:17:24.953654958-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:17:24.953688988-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:17:24.953699698-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:17:24.953713028-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:17:24.953723557-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:17:24.953798927-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:17:24.953817107-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:17:25.941893929-05:00 - TRACE - Conn::read_head
+2024-04-03T23:17:25.942166157-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:17:25.942186116-05:00 - TRACE - parse_headers;
+2024-04-03T23:17:25.942196936-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:17:25.942218386-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:17:25.942273236-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:17:25.942356675-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:17:25.942369435-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:17:25.942379315-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:17:25.942388765-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:17:25.942423335-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:17:25.942459194-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:17:25.942551393-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:17:25.942684362-05:00 - TRACE - received 422 bytes
+2024-04-03T23:17:25.942702562-05:00 - DEBUG - incoming body completed
+2024-04-03T23:17:25.942736982-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:17:25.942776852-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:25.942799431-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:25.942822261-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:17:25.942843111-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:17:25.942934700-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:17:25.943016700-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:17:25.943058019-05:00 - INFO - key change1
+2024-04-03T23:17:25.943068189-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:17:25.943099219-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:17:25.943118709-05:00 - INFO - writing to file
+2024-04-03T23:17:25.943241978-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:17:25.943274698-05:00 - INFO - 
+
+2024-04-03T23:17:25.943282578-05:00 - INFO - is bool true true
+2024-04-03T23:17:25.943305487-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204245,"id":"chatcmpl-9A8pR2xGHCSKHSS6jsOaYC9uDrjvB","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:17:25.943358107-05:00 - TRACE - client tx closed
+2024-04-03T23:17:25.943372607-05:00 - TRACE - pool closed, canceling idle interval
+2024-04-03T23:17:25.943406087-05:00 - TRACE - State::close_read()
+2024-04-03T23:17:25.943423176-05:00 - TRACE - State::close_write()
+2024-04-03T23:17:25.943436066-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:17:25.943471236-05:00 - TRACE - shut down IO complete
+2024-04-03T23:18:21.326569014-05:00 - INFO - booting up
+2024-04-03T23:18:21.327750824-05:00 - INFO - alias was selected
+2024-04-03T23:18:21.327860213-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:18:21.346562174-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:18:21.346623823-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:18:21.346653063-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:18:21.346761782-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:18:21.350918108-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:18:21.359994387-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:18:21.372031001-05:00 - TRACE - client handshake Http1
+2024-04-03T23:18:21.372062121-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:18:21.372162960-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:18:21.372272289-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:18:21.372365978-05:00 - TRACE - encode_headers;
+2024-04-03T23:18:21.372383538-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:18:21.372392738-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:18:21.372419558-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:18:21.372428308-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:18:21.372438828-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:18:21.372448098-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:18:21.372512397-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:18:21.372528037-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:22.373797312-05:00 - TRACE - Conn::read_head
+2024-04-03T23:18:22.374048240-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:18:22.374072150-05:00 - TRACE - parse_headers;
+2024-04-03T23:18:22.374083640-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:18:22.374105580-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:18:22.374170069-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:18:22.374256329-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:18:22.374268849-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:18:22.374278819-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:18:22.374288448-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:18:22.374323598-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:18:22.374362168-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:22.374403757-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:18:22.374448807-05:00 - TRACE - received 422 bytes
+2024-04-03T23:18:22.374471627-05:00 - DEBUG - incoming body completed
+2024-04-03T23:18:22.374500207-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:18:22.374546886-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:22.374582356-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:22.374606096-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:18:22.374626686-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:18:22.374710985-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:22.374754715-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:18:22.374793104-05:00 - INFO - key change1
+2024-04-03T23:18:22.374803124-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:18:22.374847324-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:18:22.374870984-05:00 - INFO - writing to file
+2024-04-03T23:18:22.374999333-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:18:22.375046302-05:00 - INFO - 
+
+2024-04-03T23:18:22.375055922-05:00 - INFO - is bool true true
+2024-04-03T23:18:22.375087582-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204301,"id":"chatcmpl-9A8qLSw63S2F1cBSOaII3mk1tSmAR","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:18:22.375168471-05:00 - TRACE - client tx closed
+2024-04-03T23:18:22.375197871-05:00 - TRACE - State::close_read()
+2024-04-03T23:18:22.375217031-05:00 - TRACE - State::close_write()
+2024-04-03T23:18:22.375234971-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:18:22.375291210-05:00 - TRACE - shut down IO complete
+2024-04-03T23:18:27.258756345-05:00 - INFO - booting up
+2024-04-03T23:18:27.259890567-05:00 - INFO - alias was selected
+2024-04-03T23:18:27.259940336-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:18:27.278537299-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:18:27.278592198-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:18:27.278625868-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:18:27.278735867-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:18:27.294438612-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:18:27.302911283-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:18:27.315456703-05:00 - TRACE - client handshake Http1
+2024-04-03T23:18:27.315485813-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:18:27.315585202-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:18:27.315651862-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:18:27.315722631-05:00 - TRACE - encode_headers;
+2024-04-03T23:18:27.315738311-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:18:27.315747021-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:18:27.315772211-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:18:27.315780311-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:18:27.315790381-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:18:27.315798720-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:18:27.315849530-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:18:27.315863600-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:28.309329123-05:00 - TRACE - Conn::read_head
+2024-04-03T23:18:28.309521851-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:18:28.309542081-05:00 - TRACE - parse_headers;
+2024-04-03T23:18:28.309558261-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:18:28.309585261-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:18:28.309632441-05:00 - TRACE - Response.parse Complete(1203)
+2024-04-03T23:18:28.309702200-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:18:28.309712670-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:18:28.309720700-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:18:28.309728470-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:18:28.309756720-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:18:28.309777699-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(424)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:28.309840729-05:00 - TRACE - decode; state=Length(424)
+2024-04-03T23:18:28.309879599-05:00 - TRACE - received 424 bytes
+2024-04-03T23:18:28.309892779-05:00 - DEBUG - incoming body completed
+2024-04-03T23:18:28.309916548-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:18:28.309948038-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:28.309966648-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:28.309999698-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:18:28.310020678-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:18:28.310084297-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:28.310106897-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:18:28.310143657-05:00 - INFO - key change1
+2024-04-03T23:18:28.310152046-05:00 - TRACE - idle interval checking for expired
+2024-04-03T23:18:28.310244076-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:18:28.310274125-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:18:28.310290525-05:00 - INFO - writing to file
+2024-04-03T23:18:28.310420804-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:18:28.310461744-05:00 - INFO - 
+
+2024-04-03T23:18:28.310469884-05:00 - INFO - is bool true true
+2024-04-03T23:18:28.310489154-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204307,"id":"chatcmpl-9A8qRi2SnjXt3AyjCVpY2zf7cZ4gf","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:18:49.575965420-05:00 - INFO - booting up
+2024-04-03T23:18:49.577223969-05:00 - INFO - alias was selected
+2024-04-03T23:18:49.577292559-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:18:49.597054011-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:18:49.597114580-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:18:49.597142950-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:18:49.597248109-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:18:49.601888263-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:18:49.611203968-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:18:49.623682279-05:00 - TRACE - client handshake Http1
+2024-04-03T23:18:49.623720518-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:18:49.623813838-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:18:49.623879207-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:18:49.623950016-05:00 - TRACE - encode_headers;
+2024-04-03T23:18:49.623965846-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:18:49.623974556-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:18:49.623999376-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:18:49.624007396-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:18:49.624017506-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:18:49.624025946-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:18:49.624085595-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:18:49.624101775-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:50.525447532-05:00 - TRACE - Conn::read_head
+2024-04-03T23:18:50.525722360-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:18:50.525747870-05:00 - TRACE - parse_headers;
+2024-04-03T23:18:50.525768200-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:18:50.525806749-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:18:50.525881759-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:18:50.525965848-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:18:50.525996658-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:18:50.526007488-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:18:50.526017368-05:00 - DEBUG - incoming body is content-length (592 bytes)
+2024-04-03T23:18:50.526056057-05:00 - TRACE - decode; state=Length(592)
+2024-04-03T23:18:50.526081477-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(424)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:50.526176366-05:00 - TRACE - decode; state=Length(424)
+2024-04-03T23:18:50.526304225-05:00 - TRACE - received 424 bytes
+2024-04-03T23:18:50.526322245-05:00 - DEBUG - incoming body completed
+2024-04-03T23:18:50.526359145-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:18:50.526399765-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:50.526422384-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:50.526445004-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:18:50.526465394-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:18:50.526582043-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:50.526610693-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}  
+2024-04-03T23:18:50.526666252-05:00 - INFO - key change1
+2024-04-03T23:18:50.526678392-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:18:50.526709642-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:18:50.526728782-05:00 - INFO - writing to file
+2024-04-03T23:18:50.526861491-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:18:50.526907340-05:00 - INFO - 
+
+2024-04-03T23:18:50.526917720-05:00 - INFO - is bool true true
+2024-04-03T23:18:50.526949650-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}  ","role":"assistant"}}],"created":1712204329,"id":"chatcmpl-9A8qntxPSkuK7HXboviS0LDKOmSnK","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":42,"prompt_tokens":1078,"total_tokens":1120}}
+2024-04-03T23:18:52.579243605-05:00 - INFO - booting up
+2024-04-03T23:18:52.580399226-05:00 - INFO - alias was selected
+2024-04-03T23:18:52.580450105-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:18:52.601324708-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:18:52.601385138-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:18:52.601413087-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:18:52.601517857-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:18:52.605896421-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:18:52.611226960-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:18:52.624337324-05:00 - TRACE - client handshake Http1
+2024-04-03T23:18:52.624375013-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:18:52.624465223-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:18:52.624531072-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:18:52.624601412-05:00 - TRACE - encode_headers;
+2024-04-03T23:18:52.624617051-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:18:52.624625731-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:18:52.624650041-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:18:52.624658131-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:18:52.624668311-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:18:52.624677341-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:18:52.624729730-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:18:52.624743680-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:53.699597237-05:00 - TRACE - Conn::read_head
+2024-04-03T23:18:53.699820075-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:18:53.699839825-05:00 - TRACE - parse_headers;
+2024-04-03T23:18:53.699850845-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:18:53.699873685-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:18:53.699936104-05:00 - TRACE - Response.parse Complete(1203)
+2024-04-03T23:18:53.700021434-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:18:53.700033974-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:18:53.700043804-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:18:53.700053333-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:18:53.700089603-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:18:53.700126603-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(424)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:18:53.700202232-05:00 - TRACE - decode; state=Length(424)
+2024-04-03T23:18:53.700325101-05:00 - TRACE - received 424 bytes
+2024-04-03T23:18:53.700342931-05:00 - DEBUG - incoming body completed
+2024-04-03T23:18:53.700376011-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:18:53.700409141-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:53.700437090-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:53.700456370-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:18:53.700472590-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:18:53.700529410-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:18:53.700542669-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.95"
+    }
+  }
+}
+2024-04-03T23:18:53.700569109-05:00 - INFO - key change1
+2024-04-03T23:18:53.700575279-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:18:53.700595369-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:18:53.700610049-05:00 - INFO - writing to file
+2024-04-03T23:18:53.700713718-05:00 - INFO - New value: opacity = 0.95
+2024-04-03T23:18:53.700740438-05:00 - INFO - 
+
+2024-04-03T23:18:53.700750598-05:00 - INFO - is bool true true
+2024-04-03T23:18:53.700769928-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.95\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204333,"id":"chatcmpl-9A8qr8z154BKnB8RySQSop2MxeLNR","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:19:09.133859696-05:00 - INFO - booting up
+2024-04-03T23:19:09.134998847-05:00 - INFO - alias was selected
+2024-04-03T23:19:09.135049746-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:19:09.154731389-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:19:09.154789918-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:19:09.154821668-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:19:09.154930687-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:19:09.160641511-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:19:09.168274999-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:19:09.185368213-05:00 - TRACE - client handshake Http1
+2024-04-03T23:19:09.185400842-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:19:09.185499962-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:19:09.185568791-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:19:09.185640621-05:00 - TRACE - encode_headers;
+2024-04-03T23:19:09.185656850-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:19:09.185665810-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:19:09.185691210-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:19:09.185699500-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:19:09.185709740-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:19:09.185718220-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:19:09.185769659-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:19:09.185783649-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:19:10.188074281-05:00 - TRACE - Conn::read_head
+2024-04-03T23:19:10.188281479-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:19:10.188301459-05:00 - TRACE - parse_headers;
+2024-04-03T23:19:10.188312499-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:19:10.188334978-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:19:10.188383848-05:00 - TRACE - Response.parse Complete(1201)
+2024-04-03T23:19:10.188467527-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:19:10.188480367-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:19:10.188500727-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:19:10.188510727-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:19:10.188543547-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:19:10.188567997-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(422)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:19:10.188649526-05:00 - TRACE - decode; state=Length(422)
+2024-04-03T23:19:10.188768745-05:00 - TRACE - received 422 bytes
+2024-04-03T23:19:10.188786885-05:00 - DEBUG - incoming body completed
+2024-04-03T23:19:10.188823354-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:19:10.188864604-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:10.188887364-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:10.188910104-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:19:10.188930274-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:19:10.189008313-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:10.189035723-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.95",
+      "new": "opacity = 0.80"
+    }
+  }
+}
+2024-04-03T23:19:10.189079102-05:00 - INFO - key change1
+2024-04-03T23:19:10.189090412-05:00 - INFO - value "opacity = 0.95"
+2024-04-03T23:19:10.189122062-05:00 - INFO - old value is "opacity = 0.95"
+2024-04-03T23:19:10.189141542-05:00 - INFO - writing to file
+2024-04-03T23:19:10.189282491-05:00 - INFO - New value: opacity = 0.80
+2024-04-03T23:19:10.189324450-05:00 - INFO - 
+
+2024-04-03T23:19:10.189334780-05:00 - INFO - is bool true true
+2024-04-03T23:19:10.189358860-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.95\",\n      \"new\": \"opacity = 0.80\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204349,"id":"chatcmpl-9A8r7HjY6AVP07pb9utgECjx7yMoG","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:19:10.189407150-05:00 - TRACE - client tx closed
+2024-04-03T23:19:10.189445879-05:00 - TRACE - State::close_read()
+2024-04-03T23:19:10.189461869-05:00 - TRACE - State::close_write()
+2024-04-03T23:19:10.189476249-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:19:10.189494799-05:00 - TRACE - pool closed, canceling idle interval
+2024-04-03T23:19:10.189577038-05:00 - TRACE - shut down IO complete
+2024-04-03T23:19:17.489978608-05:00 - INFO - booting up
+2024-04-03T23:19:17.491253448-05:00 - INFO - alias was selected
+2024-04-03T23:19:17.491367457-05:00 - INFO - the final_file_path being used is /home/osamanoo/.config/alacritty/alacritty.toml
+2024-04-03T23:19:17.510273535-05:00 - TRACE - checkout waiting for idle connection: ("https", api.openai.com)
+2024-04-03T23:19:17.510330855-05:00 - DEBUG - starting new connection: https://api.openai.com/
+2024-04-03T23:19:17.510363895-05:00 - TRACE - Http::connect; scheme=Some("https"), host=Some("api.openai.com"), port=None
+2024-04-03T23:19:17.510466574-05:00 - DEBUG - resolving host="api.openai.com"
+2024-04-03T23:19:17.514990477-05:00 - DEBUG - connecting to 104.18.7.192:443
+2024-04-03T23:19:17.525318334-05:00 - DEBUG - connected to 104.18.7.192:443
+2024-04-03T23:19:17.537473757-05:00 - TRACE - client handshake Http1
+2024-04-03T23:19:17.537499487-05:00 - TRACE - handshake complete, spawning background dispatcher task
+2024-04-03T23:19:17.537598276-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Busy }
+2024-04-03T23:19:17.537667575-05:00 - TRACE - checkout dropped for ("https", api.openai.com)
+2024-04-03T23:19:17.537737445-05:00 - TRACE - encode_headers;
+2024-04-03T23:19:17.537762065-05:00 - TRACE - -> encode_headers;
+2024-04-03T23:19:17.537773984-05:00 - TRACE - Client::encode method=POST, body=Some(Known(3896))
+2024-04-03T23:19:17.537800244-05:00 - TRACE - <- encode_headers;
+2024-04-03T23:19:17.537808524-05:00 - TRACE - -- encode_headers;
+2024-04-03T23:19:17.537822204-05:00 - TRACE - sized write, len = 3896
+2024-04-03T23:19:17.537836304-05:00 - TRACE - buffer.flatten self.len=202 buf.len=3896
+2024-04-03T23:19:17.537889754-05:00 - DEBUG - flushed 4098 bytes
+2024-04-03T23:19:17.537903283-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:19:18.480894372-05:00 - TRACE - Conn::read_head
+2024-04-03T23:19:18.481120230-05:00 - TRACE - received 1369 bytes
+2024-04-03T23:19:18.481140040-05:00 - TRACE - parse_headers;
+2024-04-03T23:19:18.481150730-05:00 - TRACE - -> parse_headers;
+2024-04-03T23:19:18.481173720-05:00 - TRACE - Response.parse bytes=1369
+2024-04-03T23:19:18.481239129-05:00 - TRACE - Response.parse Complete(1202)
+2024-04-03T23:19:18.481325449-05:00 - TRACE - <- parse_headers;
+2024-04-03T23:19:18.481337959-05:00 - TRACE - -- parse_headers;
+2024-04-03T23:19:18.481347809-05:00 - DEBUG - parsed 24 headers
+2024-04-03T23:19:18.481357239-05:00 - DEBUG - incoming body is content-length (590 bytes)
+2024-04-03T23:19:18.481389898-05:00 - TRACE - decode; state=Length(590)
+2024-04-03T23:19:18.481415918-05:00 - TRACE - flushed({role=client}): State { reading: Body(Length(423)), writing: KeepAlive, keep_alive: Busy }
+2024-04-03T23:19:18.481496117-05:00 - TRACE - decode; state=Length(423)
+2024-04-03T23:19:18.481618116-05:00 - TRACE - received 423 bytes
+2024-04-03T23:19:18.481636356-05:00 - DEBUG - incoming body completed
+2024-04-03T23:19:18.481670006-05:00 - TRACE - maybe_notify; read_from_io blocked
+2024-04-03T23:19:18.481710006-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:18.481732285-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:18.481755025-05:00 - TRACE - put; add idle connection for ("https", api.openai.com)
+2024-04-03T23:19:18.481775195-05:00 - DEBUG - pooling idle connection for ("https", api.openai.com)
+2024-04-03T23:19:18.481853225-05:00 - TRACE - flushed({role=client}): State { reading: Init, writing: Init, keep_alive: Idle }
+2024-04-03T23:19:18.481880534-05:00 - INFO - text full json {
+  "results": {
+    "change1": {
+      "old": "opacity = 0.80",
+      "new": "opacity = 0.98"
+    }
+  }
+}
+2024-04-03T23:19:18.481916074-05:00 - INFO - key change1
+2024-04-03T23:19:18.481927254-05:00 - INFO - value "opacity = 0.80"
+2024-04-03T23:19:18.481960234-05:00 - INFO - old value is "opacity = 0.80"
+2024-04-03T23:19:18.481992163-05:00 - INFO - writing to file
+2024-04-03T23:19:18.482139592-05:00 - INFO - New value: opacity = 0.98
+2024-04-03T23:19:18.482181602-05:00 - INFO - 
+
+2024-04-03T23:19:18.482191512-05:00 - INFO - is bool true true
+2024-04-03T23:19:18.482220762-05:00 - INFO - full json {"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"{\n  \"results\": {\n    \"change1\": {\n      \"old\": \"opacity = 0.80\",\n      \"new\": \"opacity = 0.98\"\n    }\n  }\n}","role":"assistant"}}],"created":1712204357,"id":"chatcmpl-9A8rFCZcSD52MVilpl8y3GOKHl9zx","model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":"fp_b28b39ffa8","usage":{"completion_tokens":41,"prompt_tokens":1078,"total_tokens":1119}}
+2024-04-03T23:19:18.482294501-05:00 - TRACE - client tx closed
+2024-04-03T23:19:18.482321931-05:00 - TRACE - State::close_read()
+2024-04-03T23:19:18.482335561-05:00 - TRACE - State::close_write()
+2024-04-03T23:19:18.482349491-05:00 - TRACE - flushed({role=client}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+2024-04-03T23:19:18.482365500-05:00 - TRACE - pool closed, canceling idle interval
+2024-04-03T23:19:18.482513479-05:00 - TRACE - shut down IO complete

@@ -3,6 +3,7 @@ use std::{fs , };
 use std::fs::canonicalize;
 use serde_json::{Value, Map, json};
 use chrono::Utc;
+use chrono::Local;
 use std::collections::HashMap;
 use log::{info, trace, warn, error};
 use log4rs;
@@ -20,6 +21,14 @@ struct OpenAiReq{
     top_p:u32,
 
 }
+#[derive(Serialize, Deserialize, Debug)]
+struct ChangeHistory{
+    old_change: String,
+    new_change: String,
+    timestamp: String,
+    counter: u32,
+}
+
 #[derive(Serialize, Deserialize)]
 struct Message{
     role: String,
@@ -35,7 +44,7 @@ struct ConfigFile{
 }
 #[derive(Debug, Serialize, Deserialize)]
 struct OpenaiConfig{
-    model : Option<String>,
+    model: Option<String>,
     temperature:Option<f32>,
     max_tokens:Option<u32>,
     top_p:Option<u32>,
@@ -296,6 +305,10 @@ async fn modify_config_file(submatches:ArgMatches){
                                                     fs::write(&final_file_path, file_content.replace(value["old"].as_str().unwrap().to_string().as_str(),
                                                                         value["new"].as_str().unwrap().to_string().as_str()))
                                                                         .expect("there was an issue writing to file");
+                                                    if submatches.get_flag("don't show changes"){
+                                                        println!("changes: {}", result_json);
+                                                    }
+
                                                 }
 
                                             }
@@ -545,6 +558,10 @@ async fn handle_cli(){
                     .arg(Arg::new("alias and nickname") .short('a').long("alias/nickname")
                             .action(ArgAction::Set) .num_args(1)
                             .help("select file from alias/nickname"))
+
+                    .arg(Arg::new("don't show changes") .short('d').long("no-output")
+                            .action(ArgAction::SetFalse)
+                            .help("don't show changes as output"))
 
 
         )
