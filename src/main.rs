@@ -1,4 +1,4 @@
-use std::io::empty;
+use std::io::{empty, stdin, self, Write};
 use std::{fs , };
 use std::fs::canonicalize;
 use serde_json::{Value, Map, json};
@@ -210,6 +210,14 @@ async fn modify_config_file(submatches:ArgMatches){
            }
         };
 
+         let mut stdin_buf = "".to_string();
+
+         if submatches.get_flag("stdin"){
+             for line in io::stdin().lines(){
+                 stdin_buf.push_str(&line.unwrap())
+             }
+         }
+
         let mut final_file_path: String = "".to_string();
 
         if let Some(file_path) = submatches.get_one::<String>("file_path_to_modify"){
@@ -294,30 +302,34 @@ async fn modify_config_file(submatches:ArgMatches){
 
                                             for(key, value) in all_results
                                             {
+
                                                 info!("key {}", key);
                                                 info!("value {}", value["old"]);
-                                                let file_content = fs::read_to_string(&final_file_path).expect("Could not find file path");
-                                                info!("old value is {}", value["old"].to_string());
+                                                if submatches.get_flag("stdin"){
+                                                    io::stdout().write(stdin_buf.replace(value["old"].as_str().unwrap().to_string().as_str(),
+                                                                            value["new"].as_str().unwrap().to_string().as_str()).as_bytes());
+                                                }
+                                                else {
+                                                    let file_content = fs::read_to_string(&final_file_path).expect("Could not find file path");
+                                                    info!("old value is {}", value["old"].to_string());
 
-                                                if file_content.contains(&value["old"].as_str().unwrap().to_string())
-                                                {
-                                                    info!("writing to file");
-                                                    fs::write(&final_file_path, file_content.replace(value["old"].as_str().unwrap().to_string().as_str(),
-                                                                        value["new"].as_str().unwrap().to_string().as_str()))
-                                                                        .expect("there was an issue writing to file");
-                                                    if submatches.get_flag("don't show changes"){
-                                                        println!("changes: {}", result_json);
+                                                    if file_content.contains(&value["old"].as_str().unwrap().to_string())
+                                                    {
+                                                        info!("writing to file");
+                                                        fs::write(&final_file_path, file_content.replace(value["old"].as_str().unwrap().to_string().as_str(),
+                                                                            value["new"].as_str().unwrap().to_string().as_str()))
+                                                                            .expect("there was an issue writing to file");
+                                                        if submatches.get_flag("show changes"){
+                                                            println!("changes: {}", result_json);
+                                                        }
+
                                                     }
-
                                                 }
 
                                             }
 
                                                 let json_s:String = result_json["results"]["change1"]["new"].as_str().unwrap().to_string();
                                                 info!("New value: {}", json_s);
-                                                let bool = fs::read_to_string(&final_file_path).expect("gone wrong").contains(&json_s.to_string());
-                                                info!("\n");
-                                                info!("is bool true {}", bool);
                                         } else {
                                              error!("Could not find the 'new' value.");
                                         }
@@ -559,9 +571,13 @@ async fn handle_cli(){
                             .action(ArgAction::Set) .num_args(1)
                             .help("select file from alias/nickname"))
 
-                    .arg(Arg::new("don't show changes") .short('d').long("no-output")
-                            .action(ArgAction::SetFalse)
-                            .help("don't show changes as output"))
+                    .arg(Arg::new("show changes") .short('d').long("no-output")
+                            .action(ArgAction::SetTrue)
+                            .help("show changes as output"))
+
+                    .arg(Arg::new("stdin") .short('s').long("stdin")
+                            .action(ArgAction::SetTrue)
+                            .help("Take stdin as input"))
 
 
         )
